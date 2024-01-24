@@ -1,0 +1,61 @@
+// Footer.scss
+.footer {
+  background-color: #515051; // Use the color you want for your footer
+  color: #fff; // Text color
+  padding: 20px 0; // Vertical padding
+  text-align: center; // Center the content
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto; // Center the content container
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Center content vertically
+    align-items: center;
+
+    .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0; // Space above and below the social links
+      display: flex; // Layout social links horizontally
+      align-items: center; // Center the links vertically
+
+      li {
+        margin: 0 10px; // Space between links
+
+        a {
+          display: flex; // Align icon center
+          justify-content: center; // Center horizontally
+          align-items: center; // Center vertically
+          width: 40px; // Width of circular icon container
+          height: 40px; // Height of circular icon container
+          border-radius: 50%; // Make it circular
+          border: 2px solid #fff; // Border color, change as needed
+          
+          // Icon color and size
+          .fa-icon, .svg-inline--fa {
+            color: #fff; // Icon color
+            width: auto; // Auto width to maintain aspect ratio
+            height: 20px; // Height of the icon, adjust as needed
+          }
+
+          &:hover, &:focus {
+            background-color: #555; // Darken the background on hover/focus, adjust as needed
+            text-decoration: none; // Remove underline on hover/focus
+          }
+        }
+      }
+    }
+
+    p {
+      margin-top: 20px; // Space between social links and copyright text
+    }
+  }
+}
+
+// Media query for mobile responsiveness
+@media (max-width: 768px) {
+  .footer .footer-content {
+    flex-direction: column; // Stack items vertically on mobile
+  }
+}

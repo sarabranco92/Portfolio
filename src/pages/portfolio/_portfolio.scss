@@ -1,0 +1,129 @@
+.AccomodationDetails{
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+
+.InformationSection {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px; 
+    color: #ff5a5f;
+
+    .AccommodationInfo {
+        width: 60%; 
+
+        .Title {
+            font-size: 36px; 
+            color: #ff5a5f;
+            margin:0 0 10px 0;
+            font-weight: 500;
+            
+        }
+
+        .Location {
+            color: #ff5a5f;
+            font-size: 26px; 
+            margin:0;
+            font-weight: 500;
+        }
+
+        .TagsList {
+            list-style: none;
+            padding: 0;
+            margin:6px 0px;
+
+            .TagItem {
+                display: inline-block;
+                text-align: center;
+                background-color: #ff5a5f;
+                color: white;
+                width: 115px; 
+                padding: 4px 12px; 
+                margin: 4px; 
+                border-radius: 5px; 
+                font-size: clamp(12px, 2vw, 12px); 
+            }
+        }
+    }
+
+    .OwnerInfo {
+        width: 40%; // 40% of 768px
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-end;
+
+
+        .Owner {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .OwnerName {
+            margin-right: 16px; 
+        }
+
+        .OwnerImage {
+            width: 64px; 
+            height: 64px; 
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+@media (max-width: 720px) {
+    .InformationSection {
+        flex-direction: column;
+        margin: 8px; 
+
+        .AccommodationInfo {
+            width: 100%; 
+            .Title {
+                font-size: 18px; 
+            }
+
+            .Location {
+                font-size: 14px; 
+            }
+
+            .TagsList {
+                display: flex;
+                flex-wrap: wrap;
+
+                .TagItem {
+                    padding: 3px 8px;
+                    font-size: 10px; 
+                }
+            }
+        }
+
+        .OwnerInfo {
+            width: 100%; 
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            
+
+       
+
+            .OwnerName {
+                font-size: 13px; 
+                flex-grow: 1;
+                text-align: right;
+            }
+
+            .OwnerImage {
+                width: 32px; 
+                height: 32px; 
+                
+            }
+        }
+    }
+
+}

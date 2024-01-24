@@ -1,0 +1,100 @@
+@import '../../utils/mixin';
+@import '../../utils/variavel';
+
+
+.collapse-container {
+  margin-top: 20px;
+}
+
+
+.collapse {
+  max-width: 1100px; /* Largeur maximale pour la compatibilité sur divers écrans */
+  margin: 0 auto; /* Centrage du composant */
+  margin-bottom: 10px; 
+
+  
+  &_title {
+    @include flex(row, space-between, center); 
+    background-color: $color-secondary; 
+    color: $color-primary; 
+    border-radius: 5px; 
+    font-weight: 200; 
+    font-size: clamp(13px, 2vw, 18px); /* Taille de police adaptable selon la taille de l'écran */
+    padding: 10px 15px; /* Padding intérieur pour l'espace autour du texte */
+    margin: 0; 
+    cursor: pointer; 
+
+    /* Styles pour l'icône flèche dans le titre */
+    .arrow {
+      transition: transform 0.3s ease; /* Transition douce pour la rotation de la flèche */
+      
+      /* Media query pour adapter la taille de la flèche sur les écrans plus petits */
+      @media(max-width: 1230px) {
+        width: 16px;
+      }
+    }
+  }
+
+  /* Styles pour le contenu du composant Collapse */
+  &_content {
+    display: flex; 
+    flex-direction: column; 
+    opacity: 1; /* Opacité totale par défaut */
+    background-color: $color-tertiary; /* Couleur de fond définie par une variable */
+    font-size: clamp(13px, 2vw, 18px); /* Taille de police adaptable selon la taille de l'écran */
+    padding: 10px 20px 20px 20px; 
+    color: $color-secondary; 
+    overflow: hidden; /* Masque le contenu débordant */
+    max-height: 0; /* Hauteur maximale initiale pour masquer le contenu */
+    transition: max-height 0.6s ease, opacity 0.6s ease; /* Transition douce pour la visibilité du contenu */
+    
+ 
+    p {
+      margin: 10px 10px 0; /* Marge autour des paragraphes */
+    }
+  }
+
+  /* Styles quand le contenu du Collapse est visible */
+  &_content_visible {
+    max-height: 1000px; /* Hauteur maximale étendue pour révéler le contenu */
+    opacity: 1; /* Opacité totale pour rendre le contenu visible */
+  }
+
+  /* Styles quand le contenu du Collapse est caché */
+  &_content_hidden {
+    max-height: 0; /* Hauteur maximale réduite pour masquer le contenu */
+    opacity: 0; /* Opacité réduite pour une transition douce */
+  }
+
+  
+  .rotated {
+    transform: rotate(-180deg); /* Rotation de la flèche pour indiquer l'état ouvert */
+  }
+}
+
+/* Styles pour les sections de description et équipement */
+.description-content {
+  display: flex; /* Affichage flex pour aligner les sections côte à côte */
+  
+  /* Styles pour les sous-sections description et équipement */
+  &__description,
+  &__equipement {
+    flex: 1; /* Répartit l'espace disponible également entre les sous-sections */
+    margin-right: 60px; /* Marge à droite pour espacer les sous-sections */
+    &:last-child {
+      margin-right: 0; /* Annulation de la marge à droite pour le dernier élément */
+    }
+  }
+  
+}
+  @media (max-width: 768px) {
+    .description-content {
+      flex-direction: column; /* Aligner les éléments en colonne sur les petits écrans */
+    }
+    
+    .description-content__description,
+    .description-content__equipement {
+      margin-right: 0; /* Annuler la marge à droite sur les petits écrans */
+      padding: 0;
+    }
+  }

@@ -1,0 +1,37 @@
+@import '../../utils/mixin';
+@import '../../utils/variavel';
+
+.page-error {
+    text-align: center;
+    
+  
+    .titre-error {
+      color: $color-secondary;
+      font-size: 150px;
+     
+    }
+  
+    .description-error {
+      color: $color-secondary;
+      display: block;
+      font-size: 20px;
+     
+    }
+  
+    .lien-home {
+      display: block;
+      margin: 20%;
+      color: $color-secondary;
+    }
+  
+    @media(max-width: 1490px) {
+      .titre-error {
+        font-size: 96px;
+      }
+  
+      .description-error {
+        font-size: 18px;
+      }
+    }
+  }
+  
