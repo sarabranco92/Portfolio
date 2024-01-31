@@ -1,6 +1,6 @@
 // src/components/Presentation.jsx
 import React from 'react';
-import './_Presentation.scss';
+import './_presentation.scss';
 
 function Presentation() {
   return (

@@ -1,6 +1,6 @@
 // src/components/Skills.jsx
 import React from 'react';
-import './_Skills.scss';
+import './_skills.scss';
 
 function Skills() {
   // Define your skills data

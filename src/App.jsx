@@ -1,27 +1,19 @@
+// src/App.js
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Presentation from './components/Presentation/presentation';
-import Portfolio from './components/Portfolio/portfolio';
-import Skills from './components/Skills/skills';
-import Contact from './components/Contact/contact';
+import MainContent from './components/MainContent/MainContent'; // You'll create this component
 import "./assets/_main.scss";
-
 
 function App() {
   return (
-    <>
-    <Header />
-      <Navbar />
-      <Presentation />
-      <Portfolio />
-      <Skills />
-      <Contact />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/main" element={<MainContent />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-

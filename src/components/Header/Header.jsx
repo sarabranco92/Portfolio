@@ -1,17 +1,19 @@
 // src/components/Header.jsx
 import React, { useState, useEffect } from 'react';
-import NET from 'vanta/dist/vanta.net.min';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate here
+import BIRDS from 'vanta/dist/vanta.birds.min';
 import Logo from "../../assets/logo2.png";
 
-import './_header.scss'; // Make sure the file path is correct
+import './_header.scss';
 
 function Header() {
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = React.useRef(null);
+  const navigate = useNavigate(); // useNavigate should be called at the top level of your component
 
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(NET({
+      setVantaEffect(BIRDS({
         el: vantaRef.current,
         mouseControls: true,
         touchControls: true,
@@ -20,12 +22,15 @@ function Header() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0xffffff,
         backgroundColor: 0x0,
-        points: 12.00,
-        maxDistance: 23.00,
-        spacing: 18.00
-        // customize these options to suit your style
+        color1: 0xff001a,
+        color2: 0xb10000,
+        birdSize: 0.50,
+        wingSpan: 10.00,
+        speedLimit: 2.00,
+        separation: 11.00,
+        alignment: 50.00,
+        cohesion: 100.00
       }));
     }
     return () => {
@@ -33,17 +38,25 @@ function Header() {
     };
   }, [vantaEffect]);
 
+  const handleEnterClick = () => {
+    navigate('/main'); // Use navigate function here
+  };
+
   return (
-    <div ref={vantaRef} className="header">
+    <div id="home" ref={vantaRef} className="header">
       <div className="header-content">
+
         <div className="header-logo">
           <img src={Logo} alt="Logo" />
         </div>
-        <div className="header-title">
-        DÉVELOPPEUR FULLSTACK
+        <div className="intro-text">
+          <h1>Hello, I'm Sara</h1>
+          <h2>Full-Stack Developer</h2>
+          <p>Engineering seamless solutions and memorable digital experiences.</p>
         </div>
-        <div className="header-subtitle">
-        Sara Branco        </div>
+        <button onClick={handleEnterClick} className="button">
+          Discover My Work
+        </button>
       </div>
     </div>
   );

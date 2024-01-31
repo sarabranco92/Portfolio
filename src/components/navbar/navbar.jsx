@@ -1,8 +1,10 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react';
+import Logo from "../../assets/logo.png";
+import { Link } from 'react-router-dom';
 import './_Navbar.scss';
 
-const sections = ['#home', '#presentation', '#portfolio', '#skills', '#contact', '#cv'];
+const sections = ['#presentation', '#portfolio', '#skills', '#contact', '#cv'];
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -50,11 +52,10 @@ const Navbar = () => {
     };
   }, []);
 
-  // ...
 
   return (
     <nav className={`navbar ${isAfterVanta ? 'is-after-vanta' : ''}`}>
-      <div className="navbar__logo"></div>
+      <Link to="/" className="navbar__logo"> <img src={Logo} alt="Logo" /></Link>
       <div className="navbar__links">
         {sections.map((section) => {
           const sectionId = section.replace('#', '');

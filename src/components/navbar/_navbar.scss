@@ -10,6 +10,7 @@
   transition: all 0.3s ease;
   z-index: 1000; 
 
+
   &.is-after-vanta {
     position: fixed;
     top: 0;
@@ -18,10 +19,10 @@
   }
 }
 
-.navbar__logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-right: 2rem;
+.navbar__logo img {
+ width: 50px;
+ display:flex;
+
 }
 
 .navbar__links {
