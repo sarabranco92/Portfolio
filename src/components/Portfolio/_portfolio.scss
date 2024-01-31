@@ -1,0 +1,93 @@
+// src/components/_Projects.scss
+.projects {
+    padding: 4rem 0;
+    background-color:white;
+    
+  
+    &__title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 1rem;
+      padding: 0 10rem;
+
+      @media (max-width: 1200px) { // Adjust the breakpoint as needed
+        grid-template-columns: repeat(3, 1fr); // 3 columns for smaller screens
+      }
+  
+      @media (max-width: 900px) { // Adjust the breakpoint as needed
+        grid-template-columns: repeat(2, 1fr); // 2 columns for even smaller screens
+      }
+  
+      @media (max-width: 600px) { // Adjust the breakpoint as needed
+        grid-template-columns: 1fr; // 1 column for mobile screens
+      }
+    }
+  
+    &__item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    &__item-title {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  
+    // Modal styles
+    &__modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1001;
+    }
+  
+    &__modal-content {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 5px;
+      text-align: center;
+      position: relative;
+    }
+  
+    &__modal-close {
+        position: absolute;
+        top: 9px;
+        right: 25px;
+        border: none;
+        background: none;
+        color: black;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 10;
+    
+        &:hover {
+          color: #ccc; // Change the color on hover if needed
+        }
+    }
+  }
+  

@@ -1,60 +1,57 @@
-@import '../../utils/mixin';
-@import '../../utils/variavel';
-
+/* src/components/_Navbar.scss */
 .navbar {
-  display:flex ;
+  width: 100%; // Ensure it spans the full width of the viewport
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000; 
+
+  &.is-after-vanta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+.navbar__logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+
+.navbar__links {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar_logo {
-  img {
-    height: 100px;
-    width: auto;
-  }
-}
-
-.navbar_menu {
-  @include flex();
-  gap: 100px;
-}
-
-.navbar a {
-  color: black;
-  font-weight: 900;
-
-  @include flex();
+.navbar__link {
+  margin: 0 1rem;
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 500;
-
-
-  &:hover {
-    text-decoration: underline;
-  }
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.5rem 1rem; // Padding for the black box effect
 }
 
-
-
-@media (max-width: 600px) {
-
-.navbar{
-  @include flex(column, space-between, center, wrap);
+.navbar__link:hover,
+.navbar__link.active { // Use the 'active' class to indicate the current section
+  color: #fff;
+  background-color: #000; // Black background on hover and when active
+  border-radius: 5px; // Optional: rounded corners for the black box
 }
-  .navbar_logo img {
-    align-items: center;
-    height: 100px; 
-    
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
   }
 
-  .navbar_menu {
-    gap: 15px; 
-    @include flex(column, space-between, center, wrap);
-    
+  .navbar__logo {
+    margin-bottom: 1rem;
   }
-
-  .navbar a {
-    font-size: 16px; 
-  }
-
-  }
+}

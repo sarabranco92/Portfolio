@@ -2,13 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Solid icon for Envelope
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; // Brand icons for GitHub and LinkedIn
-import "../footer/_footer.scss"; // Make sure this path is correct
-import VantaBackground from '../VantaBackground/VantaBackground';
+import "./_footer.scss"; // Make sure this path is correct
 
 const Footer = () => {
     return (
       <footer className="footer">
-                <VantaBackground />
         <div className="footer-content">
           <ul className="social-links">
             <li>

@@ -1,21 +1,27 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/footer';
+import Header from './components/Header/Header';
+import Presentation from './components/Presentation/presentation';
+import Portfolio from './components/Portfolio/portfolio';
+import Skills from './components/Skills/skills';
+import Contact from './components/Contact/contact';
+import "./assets/_main.scss";
 
-
-import Home from './pages/home';
-import Portfolio from './pages/portfolio/portfolio';
-import PageError from './pages/page_error';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/portfolio/:id" element={<Portfolio />} />
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<PageError />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+    <Header />
+      <Navbar />
+      <Presentation />
+      <Portfolio />
+      <Skills />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 
 export default App;
+

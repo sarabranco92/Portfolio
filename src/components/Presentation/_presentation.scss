@@ -1,0 +1,41 @@
+// src/components/_Presentation.scss
+.presentation {
+    padding: 4rem 0;
+    background-color: #f8f8f8;
+    color: #333;
+  
+    &__header {
+      text-align: center;
+    }
+  
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__underline {
+      display: inline-block;
+      width: 100px;
+      height: 4px;
+      background-color: #333;
+      margin-bottom: 2rem;
+    }
+  
+    &__content {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  
+    &__cv-link {
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+ 
+  
