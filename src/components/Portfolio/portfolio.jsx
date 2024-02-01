@@ -8,16 +8,13 @@ function Portfolio() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    // Load the projects from the JSON file into state
     setProjects(projectData);
   }, []);
 
-  // Function to open project modal with project details
   const openModal = (project) => {
     setSelectedProject(project);
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setSelectedProject(null);
   };
@@ -25,14 +22,16 @@ function Portfolio() {
   return (
     <section id="portfolio" className="projects">
       <h2 className="projects__title">MES PROJETS</h2>
-      {/* Optional: Filter buttons go here */}
       <div className="projects__grid">
         {projects.map((project) => (
-          <div className="projects__item" key={project.id} onClick={() => openModal(project)}>
-            {/* Make sure the `project.image` path is correct */}
+          <div 
+            className="projects__item" 
+            onMouseEnter={(e) => e.currentTarget.classList.add('projects__item--rotating')}
+            onMouseLeave={(e) => e.currentTarget.classList.remove('projects__item--rotating')}
+            key={project.id} 
+            onClick={() => openModal(project)}
+          >
             <img src={project.image} alt={project.title} className="projects__image" />
-            <h3 className="projects__item-title">{project.title}</h3>
-            {/* Add additional project info if needed */}
           </div>
         ))}
       </div>
@@ -42,10 +41,8 @@ function Portfolio() {
           <div className="projects__modal-content">
             <span className="projects__modal-close" onClick={closeModal}>&times;</span>
             <h3>{selectedProject.title}</h3>
-            {/* Make sure the `selectedProject.image` path is correct */}
             <img src={selectedProject.image} alt={selectedProject.title} />
             <p>{selectedProject.description}</p>
-            {/* Add additional details and a link to the project if available */}
           </div>
         </div>
       )}

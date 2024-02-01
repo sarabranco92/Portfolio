@@ -1,67 +1,44 @@
 [
     {
       "id": 1,
-      "title": "Project One",
-      "description": "A brief description of Project One.",
-      "image": "path/to/project-one-image.jpg",
+      "title": "Booki",
+      "description": "Ce projet consiste à intégrer l'interface d'un site permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix, en utilisant du code HTML et CSS.",
+      "image": "./assets/projets/bookiLogo.png",
       "technologies": ["Technology 1", "Technology 2"],
-      "url": "http://example.com/project-one"
+      "url": "sarabranco92.github.io/Booki/"
     },
     {
       "id": 2,
-      "title": "Project Two",
+      "title": "ohmyfood",
       "description": "A brief description of Project Two.",
-      "image": "path/to/project-two-image.jpg",
+      "image": "./assets/projets/ohmyfoodLogo.png",
       "technologies": ["Technology 1", "Technology 2"],
-      "url": "http://example.com/project-two"
+      "url": "sarabranco92.github.io/ohmyfoodOC/"
     },
     {
       "id": 3,
-      "title": "Project Three",
+      "title": "Nina Carducci",
       "description": "A brief description of Project Three.",
-      "image": "path/to/project-three-image.jpg",
+      "image": "./assets/projets/ninacarducciLogo.jpg",
       "technologies": ["Technology 1", "Technology 2"],
-      "url": "http://example.com/project-three"
+      "url": "sarabranco92.github.io/ninacarducci/"
     },
-    {
+   
+      {
         "id": 4,
-        "title": "Project Three",
+        "title": "Kasa",
         "description": "A brief description of Project Three.",
-        "image": "path/to/project-three-image.jpg",
+        "image": "./assets/projets/kasaLogo.png",
         "technologies": ["Technology 1", "Technology 2"],
-        "url": "http://example.com/project-three"
+        "url": "sarabranco92.github.io/Kasa-react/"
       },
       {
         "id": 5,
-        "title": "Project Three",
+        "title": "Argent Bank",
         "description": "A brief description of Project Three.",
-        "image": "path/to/project-three-image.jpg",
+        "image": "./assets/projets/argentbankLogo.png",
         "technologies": ["Technology 1", "Technology 2"],
-        "url": "http://example.com/project-three"
-      },
-      {
-        "id": 6,
-        "title": "Project Three",
-        "description": "A brief description of Project Three.",
-        "image": "path/to/project-three-image.jpg",
-        "technologies": ["Technology 1", "Technology 2"],
-        "url": "http://example.com/project-three"
-      },
-    {
-      "id": 7,
-      "title": "Project Ten",
-      "description": "A brief description of Project Ten.",
-      "image": "path/to/project-ten-image.jpg",
-      "technologies": ["Technology 1", "Technology 2"],
-      "url": "http://example.com/project-ten"
-    },
-    {
-        "id": 8,
-        "title": "Project Ten",
-        "description": "A brief description of Project Ten.",
-        "image": "path/to/project-ten-image.jpg",
-        "technologies": ["Technology 1", "Technology 2"],
-        "url": "http://example.com/project-ten"
+        "url": "sarabranco92.github.io/argent-bank/"
       }
    
   ]
