@@ -6,10 +6,11 @@ import Logo from "../../assets/logo2.png";
 
 import './_header.scss';
 
+
 function Header() {
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = React.useRef(null);
-  const navigate = useNavigate(); // useNavigate should be called at the top level of your component
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     if (!vantaEffect) {
@@ -50,7 +51,7 @@ function Header() {
           <img src={Logo} alt="Logo" />
         </div>
         <div className="intro-text">
-          <h1>Hello, I'm Sara</h1>
+          <h1>Hello, i m Sara</h1>
           <h2>Full-Stack Developer</h2>
           <p>Engineering seamless solutions and memorable digital experiences.</p>
         </div>

@@ -1,5 +1,4 @@
 // src/components/MainContent.jsx
-import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Presentation from '../Presentation/Presentation';
 import Portfolio from '../Portfolio/portfolio';

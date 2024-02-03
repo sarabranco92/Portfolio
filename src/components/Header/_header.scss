@@ -1,6 +1,6 @@
 // src/components/_header.scss
 .header {
-  height: 100vh;
+ 
   position: relative;
   color: #fff;
   display: flex;
@@ -12,13 +12,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px; // Adjust the space between the text and the image
+     // Adjust the space between the text and the image
   }
 
   .intro-text {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:0;
 
     h1 {
       font-size: 3rem;
@@ -38,14 +39,7 @@
     }
   }
 
-  .profile-container {
-    img {
-      width: 200px; // Adjust as needed
-      height: auto;
-      border-radius: 50%; // Makes it a circle
-      border: 5px solid #fff; // White border around the image
-    }
-  }
+ 
 
   .button {
     min-width: 300px;
@@ -65,8 +59,7 @@
     outline: none;
     position: relative;
     padding: 10px;
-    margin-top: 60px;
-
+  
     &:hover, &:focus {
       color: #313133;
       transform: translateY(-6px);

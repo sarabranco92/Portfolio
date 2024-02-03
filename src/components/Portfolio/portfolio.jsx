@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import React, { useState, useEffect } from 'react';
 import projectData from '../../data/portfolio.json';
 import './_portfolio.scss';
@@ -40,9 +39,15 @@ function Portfolio() {
         <div className="projects__modal">
           <div className="projects__modal-content">
             <span className="projects__modal-close" onClick={closeModal}>&times;</span>
-            <h3>{selectedProject.title}</h3>
-            <img src={selectedProject.image} alt={selectedProject.title} />
-            <p>{selectedProject.description}</p>
+            <div className="projects__modal-left">
+              {/* Use modalImage instead of image for the modal */}
+              <img src={selectedProject.modalImage} alt={selectedProject.title} className="projects__modal-img" />
+            </div>
+            <div className="projects__modal-right">
+              <h3>{selectedProject.title}</h3>
+              <p>{selectedProject.description}</p>
+              <a href={selectedProject.url} className="projects__modal-visit" target="_blank" rel="noopener noreferrer">VISITER LE SITE</a>
+            </div>
           </div>
         </div>
       )}

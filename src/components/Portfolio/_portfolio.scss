@@ -1,96 +1,129 @@
-// src/components/_Projects.scss
 .projects {
-    padding: 4rem 0;
-    background-color:white;
-    
+  padding: 4rem 0;
   
-    &__title {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-  
-    &__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 1rem;
-      padding: 0 10rem;
 
-      @media (max-width: 1200px) { // Adjust the breakpoint as needed
-        grid-template-columns: repeat(3, 1fr); // 3 columns for smaller screens
-      }
-  
-      @media (max-width: 900px) { // Adjust the breakpoint as needed
-        grid-template-columns: repeat(2, 1fr); // 2 columns for even smaller screens
-      }
-  
-      @media (max-width: 600px) { // Adjust the breakpoint as needed
-        grid-template-columns: 1fr; // 1 column for mobile screens
-      }
+  &__title {
+    color: #333; // Change title color as desired
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0 10rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
     }
-  
-    &__item {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      align-items: center;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-  
-      &:hover {
-        transform: translateY(-5px);
-      }
-      &--rotating {
-        animation: rotateEffect 3s infinite linear;
-      }
-    }
-  
-    &__image {
-      width: 100%;
-      height: auto;
-      display: block;
-      text-align: center;
-      object-fit: cover;
-    }
-  
-   
-  
-    // Modal styles
-    &__modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1001;
-    }
-  
-    &__modal-content {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 5px;
-      text-align: center;
-      position: relative;
-    }
-  
-    &__modal-close {
-        position: absolute;
-        top: 9px;
-        right: 25px;
-        border: none;
-        background: none;
-        color: black;
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 10;
-    
-        &:hover {
-          color: #ccc; // Change the color on hover if needed
-        }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
     }
   }
+
+  &__item {
   
+    
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Optional: add shadow on hover
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+    object-fit: cover;
+  }
+
+  // Modal styles
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); // Darker modal background for better contrast
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+  }
+
+  &__modal-content {
+    position: relative;
+    display: flex; // Use flexbox for side-by-side layout
+    max-width: 960px; // Adjust as needed for your design
+    width: 80%; // Responsive width
+    background: #ffffff; // White background for modal content
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: 0rem; // Adjusted to move close button to the top-right corner
+    right: 0.5rem;
+    border: none;
+    background: none;
+    color: #333; // Dark color for close button
+    font-size: 2rem; // Larger close button
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover {
+      color: #777; // Darker grey on hover for the close button
+    }
+  }
+
+  &__modal-left {
+    flex: 1;
+    overflow: hidden; // If the image is too large
+  }
+
+  &__modal-right {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; // Align text to the left
+    text-align: left;
+    background: #fafafa; // Light grey background for text content area
+
+    h3 {
+      color: #333; // Dark color for the title
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #666; // Dark grey for the description text
+      margin-bottom: 2rem;
+    }
+
+    a {
+      color: #0056b3; // Color for the visit link button
+      text-decoration: none;
+      margin-left: 30%;
+      &:hover {
+        text-decoration: underline; // Underline on hover for the link
+      }
+    }
+  }
+
+  &__modal-img {
+    width: 100%; // Ensure the image takes the full width of its container
+    height: auto; // Maintain aspect ratio
+    display: block;
+  }
+}
