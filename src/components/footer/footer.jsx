@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Solid icon for Envelope
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; // Brand icons for GitHub and LinkedIn
-import "./_footer.scss"; // Make sure this path is correct
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'; 
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; 
+import "./_footer.scss"; 
 
 const Footer = () => {
     return (
@@ -11,20 +11,19 @@ const Footer = () => {
           <ul className="social-links">
             <li>
               <a href="mailto:contact@email.com" className="social-links">
-                <FontAwesomeIcon icon={faEnvelope} /> {/* Use the envelope icon */}
+                <FontAwesomeIcon icon={faEnvelope} /> 
               </a>
             </li>
             <li>
               <a href="https://github.com/sarabranco92" className="social-links">
-                <FontAwesomeIcon icon={faGithub} /> {/* Use the GitHub icon */}
+                <FontAwesomeIcon icon={faGithub} /> 
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/sarabranco92" className="social-links"> {/* Update href with your LinkedIn profile link */}
-                <FontAwesomeIcon icon={faLinkedinIn} /> {/* Use the LinkedIn icon */}
+              <a href="https://www.linkedin.com/in/sarabranco92" className="social-links"> 
+                <FontAwesomeIcon icon={faLinkedinIn} /> 
               </a>
             </li>
-            {/* Add other social links as needed */}
           </ul>
           <p>&copy; {new Date().getFullYear()} Sara Branco.  All rights reserved.</p>
         </div>

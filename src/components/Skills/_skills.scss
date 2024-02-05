@@ -37,8 +37,8 @@
         .skills__progress-bar {
           height: 1rem;
           border-radius: 5px;
-          background-color: #3498db; // Use your color
-          width: 0; // Initial width, will be set by inline style
+          background-color: #3498db; 
+          width: 0; 
           transition: width 1s ease;
         }
       }

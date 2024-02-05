@@ -3,7 +3,7 @@ import React from 'react';
 import './_skills.scss';
 
 function Skills() {
-  // Define your skills data
+ 
   const skills = [
     { name: 'HTML5', level: '98%' },
     { name: 'CSS', level: '94%' },

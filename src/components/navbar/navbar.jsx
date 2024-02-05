@@ -1,6 +1,6 @@
-// src/components/Navbar.jsx
+
 import React, { useState, useEffect } from 'react';
-import Logo from "../../assets/logo.png";
+import Logo from "../../../public/assets/logo.png";
 import { Link } from 'react-router-dom';
 import './_Navbar.scss';
 
@@ -40,9 +40,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // This line checks if the scroll position is greater than the window height
+     
       const shouldBeFixed = window.scrollY > window.innerHeight;
-      setIsAfterVanta(shouldBeFixed); // This line should use setIsAfterVanta
+      setIsAfterVanta(shouldBeFixed);
     };
 
     window.addEventListener('scroll', handleScroll);

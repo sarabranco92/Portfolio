@@ -1,8 +1,11 @@
-// src/components/Header.jsx
+
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate here
+import { useNavigate } from 'react-router-dom'; 
 import BIRDS from 'vanta/dist/vanta.birds.min';
-import Logo from "../../assets/logo2.png";
+import Logo from '../../../public/assets/logo.png'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'; 
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; 
 
 import './_header.scss';
 
@@ -40,24 +43,39 @@ function Header() {
   }, [vantaEffect]);
 
   const handleEnterClick = () => {
-    navigate('/main'); // Use navigate function here
+    navigate('/main'); 
   };
 
   return (
     <div id="home" ref={vantaRef} className="header">
+      <div  className="social-links">
+       <ul>
+            <li>
+              <a href="mailto:contact@email.com" className="social-links">
+                <FontAwesomeIcon icon={faEnvelope} /> 
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sarabranco92" className="social-links">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/sarabranco92" className="social-links"> 
+                <FontAwesomeIcon icon={faLinkedinIn} /> 
+              </a>
+            </li>
+          </ul>
+          </div>
       <div className="header-content">
-
-        <div className="header-logo">
-          <img src={Logo} alt="Logo" />
-        </div>
         <div className="intro-text">
-          <h1>Hello, i m Sara</h1>
-          <h2>Full-Stack Developer</h2>
+          <h1>Hi, I m Sara</h1>
+          <h2>Junior Developer</h2>
           <p>Engineering seamless solutions and memorable digital experiences.</p>
         </div>
-        <button onClick={handleEnterClick} className="button">
-          Discover My Work
-        </button>
+        <div className="logo-container" onClick={handleEnterClick}>
+          <img src={Logo} alt="Logo" className="rotating-logo" />
+        </div>
       </div>
     </div>
   );

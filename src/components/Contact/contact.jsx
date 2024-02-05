@@ -13,7 +13,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Remplacez les valeurs ci-dessous par vos identifiants EmailJS réels
+    // Remplacez les valeurs ci-dessous par les identifiants EmailJS réels
     const serviceID = '21712';
     const templateID = 'temp1';
     const userID = 'P9QJKctqmf7zHXkq8';

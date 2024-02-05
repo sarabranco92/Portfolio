@@ -1,12 +1,12 @@
 
+html {
+  overflow: scroll;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; // You can use any font-family you prefer
-    background-color: #fff; // Set the background color for the body
-    color: #333; // Set the text color for the body
-    line-height: 1.6; // Set a default line-height for the body
-  }
-  
-  
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
