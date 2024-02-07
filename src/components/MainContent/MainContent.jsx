@@ -13,8 +13,8 @@ function MainContent() {
     <div className='background'>
       <Navbar />
       <Presentation />
-      <Skills />
        <Portfolio />
+       <Skills />
       <Contact />
       </div>
       <Footer />

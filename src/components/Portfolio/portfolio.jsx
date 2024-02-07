@@ -37,10 +37,10 @@ function Portfolio() {
                 ))}
               </ul>
             </div>
-            <div className="projects__modal-center">
-              <h3 className="projects__modal-title">{selectedProject.title}</h3>
-              <p className="projects__modal-description">{selectedProject.description}</p>
-              <a href={selectedProject.url} className="projects__modal-visit" target="_blank" rel="noopener noreferrer">VISITER LE SITE</a>
+            <div className="portfolio__modal-center">
+              <h3 className="portfolio__modal-title">{selectedProject.title}</h3>
+              <p className="portfolio__modal-description">{selectedProject.description}</p>
+              <a href={selectedProject.url} className="portfolio__modal-visit" target="_blank" rel="noopener noreferrer">VISITER LE SITE</a>
             </div>
           </div>
         </div>
