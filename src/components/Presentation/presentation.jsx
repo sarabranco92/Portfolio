@@ -6,7 +6,7 @@ function Presentation() {
   return (
     <section id="presentation" className="presentation">
       <div className="presentation__header">
-        <h2 className="presentation__title">Presentation</h2>
+        <h2 className="presentation__title">Behind the Scenes</h2>
         <div className="presentation__underline"></div>
       </div>
       <div className="presentation__content">

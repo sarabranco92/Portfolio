@@ -31,7 +31,8 @@ function Contact() {
 
   return (
     <section id="contact" className="contact">
-      <h2 className="contact__title">N'HÉSITEZ PAS À ME CONTACTER</h2>
+      <h2 className="contact__title">Collaborate with Me</h2>
+      <div className="contact__underline"></div>
       {submitStatus.message && (
         <div className={`contact__alert ${submitStatus.status === 'success' ? 'contact__alert--success' : 'contact__alert--error'}`}>
           {submitStatus.message}

@@ -1,11 +1,12 @@
 
 .navbar {
   width: 100%; 
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #a3a3a3 0%, #ffffff 74%);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   z-index: 1000; 
@@ -15,7 +16,6 @@
 .navbar__logo img {
  width: 30px;
  display:flex;
-
 }
 
 .navbar__links {

@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Booki",
       "description": "Ce projet consiste à intégrer l'interface d'un site permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix, en utilisant du code HTML et CSS.",
-      "image": "./assets/projets/bookiLogo.webp",
+      "image": "./assets/projets/bookiLogo.png",
       "modalImage": "./assets/projets/bookiSite.png",
       "technologies": ["Technology 1", "Technology 2"],
       "url": "https://sarabranco92.github.io/Booki/"
@@ -12,7 +12,7 @@
       "id": 2,
       "title": "ohmyfood",
       "description": "A brief description of Project Two.",
-      "image": "./assets/projets/ohmyfoodLogo.webp",
+      "image": "./assets/projets/ohmyfoodLogo.png",
       "modalImage": "./assets/projets/ohmyfoodSite.png",
       "technologies": ["Technology 1", "Technology 2"],
       "url": "sarabranco92.github.io/ohmyfoodOC/"
@@ -21,7 +21,7 @@
       "id": 3,
       "title": "Nina Carducci",
       "description": "A brief description of Project Three.",
-      "image": "./assets/projets/ninacarducciLogo.webp",
+      "image": "./assets/projets/ninacarducciLogo.png",
       "modalImage": "./assets/projets/ninacarducciSite.png",
       "technologies": ["Technology 1", "Technology 2"],
       "url": "sarabranco92.github.io/ninacarducci/"
@@ -31,7 +31,7 @@
         "id": 4,
         "title": "Kasa",
         "description": "A brief description of Project Three.",
-        "image": "./assets/projets/kasaLogo.webp",
+        "image": "./assets/projets/kasaLogo.png",
         "modalImage": "./assets/projets/kasaSite.png",
         "technologies": ["Technology 1", "Technology 2"],
         "url": "sarabranco92.github.io/Kasa-react/"
@@ -40,7 +40,7 @@
         "id": 5,
         "title": "Argent Bank",
         "description": "A brief description of Project Three.",
-        "image": "./assets/projets/argentbankLogo.webp",
+        "image": "./assets/projets/argentbankLogo.png",
         "modalImage": "./assets/projets/argentbankSite.png",
         "technologies": ["Technology 1", "Technology 2"],
         "url": "sarabranco92.github.io/argent-bank/"

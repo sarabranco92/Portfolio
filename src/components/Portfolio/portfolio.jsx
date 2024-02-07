@@ -14,27 +14,24 @@ function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="projects">
-      <h2 className="projects__title">MES PROJETS</h2>
-      <div className="projects__grid">
+    <section id="portfolio" className="portfolio">
+      <h2 className="portfolio__title">Project Highlights</h2>
+      <div className="portfolio__underline"></div>
+      <div className="portfolio__grid">
         {projectData.map((project) => (
-          <div
-            className="projects__item"
-            key={project.id}
-            onClick={() => openModal(project)}
-          >
-            <img src={project.image} alt={project.title} className="projects__image" />
+          <div key={project.id} className="portfolio__item" onClick={() => openModal(project)}>
+            <img src={project.image} alt={project.title} className="portfolio__image" />
           </div>
         ))}
       </div>
 
       {selectedProject && (
-        <div className="projects__modal">
-          <div className="projects__modal-content">
-            <span className="projects__modal-close" onClick={closeModal}>&times;</span>
-            <div className="projects__modal-column">
+        <div className="portfolio__modal">
+          <div className="portfolio__modal-content">
+            <span className="portfolio__modal-close" onClick={closeModal}>&times;</span>
+            <div className="portfolio__modal-column">
               <img src={selectedProject.modalImage} alt={selectedProject.title} className="projects__modal-img" />
-              <ul className="projects__modal-technologies">
+              <ul className="portfolio__modal-technologies">
                 {selectedProject.technologies.map((tech, index) => (
                   <li key={index}>{tech}</li>
                 ))}

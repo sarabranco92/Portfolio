@@ -1,6 +1,7 @@
 // src/components/Skills.jsx
 import React from 'react';
 import './_skills.scss';
+import Image from "../../../public/assets/imageSkill.jpg";
 
 function Skills() {
  
@@ -15,7 +16,10 @@ function Skills() {
 
   return (
     <section id="skills" className="skills">
-      <h2 className="skills__title">MES COMPÉTENCES</h2>
+      <h2 className="skills__title">My Skill Set</h2>
+      <div className="skills__underline"></div>
+      <div className='skill__total'>
+        <img src={Image} alt='Skill Image' className='skills__image'/>
       <div className="skills__container">
         {skills.map((skill) => (
           <div key={skill.name} className="skills__item">
@@ -26,6 +30,7 @@ function Skills() {
             <span className="skills__level">{skill.level}</span>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

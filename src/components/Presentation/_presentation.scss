@@ -1,8 +1,7 @@
 // src/components/_Presentation.scss
 .presentation {
     padding: 4rem 0;
-    background-color: #f8f8f8;
-    color: #333;
+    color: #c0c0c0;
   
     &__header {
       text-align: center;
@@ -17,7 +16,7 @@
       display: inline-block;
       width: 100px;
       height: 4px;
-      background-color: #333;
+      background-color: #c0c0c0;
       margin-bottom: 2rem;
     }
   
@@ -27,14 +26,7 @@
       line-height: 1.6;
     }
   
-    &__cv-link {
-      color: #333;
-      font-weight: bold;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+
   }
   
  

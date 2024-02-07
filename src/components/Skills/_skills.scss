@@ -2,20 +2,40 @@
 .skills {
     padding: 4rem 0;
     text-align: center;
-    background-color: #ffffff;
+  
   
     &__title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #c0c0c0;
+    }
+  
+    &__underline {
+      display: inline-block;
+      width: 100px;
+      height: 4px;
+      background-color: #c0c0c0;
       margin-bottom: 2rem;
     }
   
+    
+
     &__container {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 5rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-content: center;
     }
   
+    img {
+      .skills__image {
+        height: 100%; 
+        width: auto; 
+      }
+    }
+   
     &__item {
       width: 100%;
       margin-bottom: 1rem;
@@ -43,9 +63,12 @@
         }
       }
   
-     // .skills__level {
-        // Style for skill level label (e.g., '94%')
-     // }
     }
   }
+  .skill__total{
+      display: flex;
+      flex-direction: row;
+      justify-content:left;
+      align-items: flex-start;
+    }
   
