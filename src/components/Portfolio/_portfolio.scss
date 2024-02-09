@@ -81,12 +81,11 @@
     background: #ffffff;
     border-radius: 5px;
     padding: 2rem;
-    width: 80%;
+    width: 60%;
+    height: 80%;
     max-width: 960px;
     display: flex;
-   justify-content: space-around;
-   flex-direction: row;
-    align-items: flex-start; 
+    align-items: flex-start;
     overflow: hidden;
   }
 
@@ -99,55 +98,42 @@
     color: #333;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 10;
     &:hover {
       color: #777;
     }
   }
 
-  &__modal-body {
-    display: flex;
-  width: 100%;
-  }
   &__modal-column {
-    &:first-child {
-      flex-basis: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 2rem; 
+  }
 
-    &:last-child {
-      flex-basis: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 0 2rem; 
-    }
+  &__modal-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   &__modal-img {
-    width: 100%;
-    max-width: 400px; 
-    height: auto;
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
     margin-bottom: 1rem;
   }
 
-  &__modal-list {
-    list-style: none;
-    padding-left: 0;
-    text-align: left;
-
-    li {
-      padding: 0.25rem 0;
-    }
-  }
   &__modal-technologies {
-    list-style:circle;
-    padding-left: 0;
-    margin-top: 2rem; 
-
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    
     li {
       background: #e1e1e1;
       padding: 0.5rem 1rem;
@@ -155,33 +141,39 @@
       border-radius: 4px;
     }
   }
-  &__modal-info-title {
+
+  &__modal-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    
   }
 
-  &__modal-info-desc {
+  &__modal-description {
     margin-bottom: 2rem;
   }
 
   &__modal-visit {
-    color:#3a88f4;
+    display: flex;
+    color: #3a88f4;
     text-decoration: none;
     border-radius: 4px;
-    margin: 10%;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem;
     &:hover {
-      color: #777;
+      background-color: #f0f0f0;
     }
   }
-  .projects__modal-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 50%;
+}
+
+@media (max-width: 900px) {
+  .portfolio__grid {
+    padding: 0 10rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+}
+
+@media (max-width: 600px) {
+  .portfolio__grid {
+    padding: 0 5rem;
+    grid-template-columns: 1fr;
+  }
 }

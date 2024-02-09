@@ -30,7 +30,7 @@ function Portfolio() {
           <div className="portfolio__modal-content">
             <span className="portfolio__modal-close" onClick={closeModal}>&times;</span>
             <div className="portfolio__modal-column">
-              <img src={selectedProject.modalImage} alt={selectedProject.title} className="projects__modal-img" />
+              <img src={selectedProject.modalImage} alt={selectedProject.title} className="portfolio__modal-img" />
               <ul className="portfolio__modal-technologies">
                 {selectedProject.technologies.map((tech, index) => (
                   <li key={index}>{tech}</li>
