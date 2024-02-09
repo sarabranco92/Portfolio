@@ -15,49 +15,42 @@
       width: 100px;
       height: 4px;
       background-color: #2c2c2c;
-      margin-bottom: 2rem;
+      margin-bottom: 5rem;
     }
   
     
 
     &__container {
-      max-width: 800px;
-      margin: 5rem;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-content: center;
+      width: 100%;
+      
     }
-  
-    img {
-      .skills__image {
-        height: 100%; 
-        width: auto; 
-      }
-    }
-   
+
     &__item {
       width: 100%;
       margin-bottom: 1rem;
   
-      .skills__name {
-        display: inline-block;
-        width: 20%;
-        text-align: left;
+    
+
+      .skills__logo{
+        height: 2rem;
       }
   
       .skills__progress {
         display: inline-block;
+        margin-left: 1.5rem;
         background-color: #ddd;
-        width: 70%;
+        width: 60%;
         margin-right: 5%;
         border-radius: 5px;
         overflow: hidden;
   
         .skills__progress-bar {
-          height: 1rem;
+          height: 2rem;
           border-radius: 5px;
-          background-color: #3498db; 
           width: 0; 
           transition: width 1s ease;
         }
@@ -68,7 +61,7 @@
   .skill__total{
       display: flex;
       flex-direction: row;
-      justify-content:left;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: center;
     }
   

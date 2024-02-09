@@ -1,0 +1,52 @@
+[
+    {
+      "name": "HTML5",
+      "level": "98%",
+      "color": "#e44d26",
+      "icon": "html5"
+    },
+    {
+      "name": "CSS",
+      "level": "94%",
+      "color": "#264de4",
+      "icon": "css3"
+    },
+    {
+      "name": "JavaScript",
+      "level": "80%",
+      "color": "#f0db4f",
+      "icon": "js"
+    },
+    {
+      "name": "SASS",
+      "level": "90%",
+      "color": "#c69",
+      "icon": "sass"
+    },
+    {
+      "name": "React",
+      "level": "92%",
+      "color": "#61DBFB",
+      "icon": "react"
+    },
+    {
+      "name": "Git",
+      "level": "87%",
+      "color": "#f34f29",
+      "icon": "git-alt"
+    },
+    {
+      "name": "Node.js",
+      "level": "85%",
+      "color": "#68a063",
+      "icon": "nodejs"
+    },
+ 
+    {
+      "name": "MongoDB",
+      "level": "78%",
+      "color": "#4FAA41",
+      "icon": "database" 
+     }
+  ]
+  

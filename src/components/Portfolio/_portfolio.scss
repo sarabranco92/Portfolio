@@ -20,6 +20,7 @@
     width: 100px;
     height: 4px;
     background-color: #2c2c2c;
+
   }
 
   &__grid {
@@ -82,7 +83,7 @@
     border-radius: 5px;
     padding: 2rem;
     width: 60%;
-    height: 80%;
+    height: auto;
     max-width: 960px;
     display: flex;
     align-items: flex-start;
@@ -112,13 +113,17 @@
     margin-right: 2rem; 
   }
 
+ 
+
   &__modal-center {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-  }
+    text-align: left;
+    } 
+ 
 
   &__modal-img {
     width: 100%; 
@@ -157,7 +162,7 @@
     color: #3a88f4;
     text-decoration: none;
     border-radius: 4px;
-    padding: 0.5rem 1rem;
+    padding: 5rem 1 rem;
     &:hover {
       background-color: #f0f0f0;
     }

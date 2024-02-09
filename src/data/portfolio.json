@@ -15,7 +15,7 @@
       "image": "./assets/projets/ohmyfoodLogo.png",
       "modalImage": "./assets/projets/ohmyfoodSite.png",
       "technologies": ["Technology 1", "Technology 2"],
-      "url": "sarabranco92.github.io/ohmyfoodOC/"
+      "url": "https://sarabranco92.github.io/ohmyfoodOC/"
     },
     {
       "id": 3,
@@ -24,7 +24,7 @@
       "image": "./assets/projets/ninacarducciLogo.png",
       "modalImage": "./assets/projets/ninacarducciSite.png",
       "technologies": ["Technology 1", "Technology 2"],
-      "url": "sarabranco92.github.io/ninacarducci/"
+      "url": "https://sarabranco92.github.io/ninacarducci/"
     },
    
       {
@@ -34,7 +34,7 @@
         "image": "./assets/projets/kasaLogo.png",
         "modalImage": "./assets/projets/kasaSite.png",
         "technologies": ["Technology 1", "Technology 2"],
-        "url": "sarabranco92.github.io/Kasa-react/"
+        "url": "https://sarabranco92.github.io/Kasa-react/"
       },
       {
         "id": 5,
@@ -43,7 +43,7 @@
         "image": "./assets/projets/argentbankLogo.png",
         "modalImage": "./assets/projets/argentbankSite.png",
         "technologies": ["Technology 1", "Technology 2"],
-        "url": "sarabranco92.github.io/argent-bank/"
+        "url": "https://sarabranco92.github.io/argent-bank/"
       }
    
   ]

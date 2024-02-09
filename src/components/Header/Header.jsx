@@ -48,25 +48,7 @@ function Header() {
 
   return (
     <div id="home" ref={vantaRef} className="header">
-      <div  className="social-links">
-       <ul>
-            <li>
-              <a href="mailto:contact@email.com" className="social-links">
-                <FontAwesomeIcon icon={faEnvelope} /> 
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/sarabranco92" className="social-links">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/sarabranco92" className="social-links"> 
-                <FontAwesomeIcon icon={faLinkedinIn} /> 
-              </a>
-            </li>
-          </ul>
-          </div>
+     
       <div className="header-content">
         <div className="intro-text">
           <h1>Hi, I m Sara</h1>
