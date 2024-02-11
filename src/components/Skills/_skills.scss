@@ -1,67 +1,89 @@
-// src/components/_Skills.scss
-.skills {
-    padding: 4rem 0;
+.skills-container {
+  .skills__header {
     text-align: center;
-  
-  
-    &__title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #2c2c2c;
-    }
-  
-    &__underline {
-      display: inline-block;
-      width: 100px;
-      height: 4px;
-      background-color: #2c2c2c;
-      margin-bottom: 5rem;
-    }
-  
+  }
+  .skills__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .skills__underline {
+    display: inline-block;
+    width: 100px;
+    height: 4px;
+    background-color: #2c2c2c;
+    margin-bottom: 2rem;
+  }
+
+  .skills-layout {
+    display: flex;
+    align-items: start;
+ 
     
-
-    &__container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-content: center;
-      width: 100%;
-      
-    }
-
-    &__item {
-      width: 100%;
-      margin-bottom: 1rem;
-  
-    
-
-      .skills__logo{
-        height: 2rem;
+    .skills__image {
+      flex: 1;
+      img {
+        width: 100%;
+        height: auto;
       }
-  
-      .skills__progress {
-        display: inline-block;
-        margin-left: 1.5rem;
-        background-color: #ddd;
-        width: 60%;
-        margin-right: 5%;
-        border-radius: 5px;
-        overflow: hidden;
-  
-        .skills__progress-bar {
+    }
+    
+    .skills-layout__list {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      margin: 0 10%;
+      
+      .skills-layout__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        
+        .skills-layout__bar {
+          flex: 2;
+          position: relative;
           height: 2rem;
+          background: rgba(17, 17, 17, .3);
           border-radius: 5px;
-          width: 0; 
-          transition: width 1s ease;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          
+        }
+          
+        .skills-layout__fill {
+          position: relative;
+          padding-top: 1%;
+          height: 100%;
+          width: 0; // Start with no width
+          background-color: inherit; // Inherits the background color
+          animation: animateSkill 2s forwards; // Animation for the fill
+
+          .skills-layout__name {
+            position: absolute;
+            left: 10px; // Padding from the left
+            color: white;
+            z-index: 2;
+          }
+
+          .skills-layout__level {
+            position: absolute;
+            right: 10px; // Padding from the right
+            color: white;
+            z-index: 2;
+          }
         }
       }
-  
     }
   }
-  .skill__total{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-  
+}
+
+
+@keyframes animateSkill {
+from {
+  width: 0;
+}
+to {
+  width: 100%; // Will grow to the max-width set by inline styles
+}
+}

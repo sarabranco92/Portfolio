@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Logo from "/assets/logo.png";
 import { Link } from 'react-router-dom';
 import './_Navbar.scss';
+import cvFile from '../../../public/assets/Sara_BrancoCV.pdf';
 
-const sections = ['#presentation', '#portfolio', '#skills', '#contact', '#cv'];
+const sections = ['#presentation', '#portfolio', '#skills', '#contact'];
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -69,6 +70,14 @@ const Navbar = () => {
             </a>
           );
         })}
+  <a
+      href={cvFile}
+      className="navbar__link"
+      target="_blank"
+      rel="noopener noreferrer" // Isso é importante por razões de segurança
+    >
+      CV
+    </a>
       </div>
     </nav>
   );

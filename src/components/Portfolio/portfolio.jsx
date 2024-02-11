@@ -14,8 +14,8 @@ function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="portfolio">
-      <h2 className="portfolio__title">Project Highlights</h2>
+<section id="portfolio" className="portfolio animate-on-scroll">
+      <h2 className="portfolio__title text-animate" data-text="Mes Projets"></h2>
       <div className="portfolio__underline"></div>
       <div className="portfolio__grid">
         {projectData.map((project) => (

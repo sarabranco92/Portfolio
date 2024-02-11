@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import BIRDS from 'vanta/dist/vanta.birds.min';
 import Logo from '../../../public/assets/logo.png'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'; 
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; 
-
+import "../../style/_main.scss"
 import './_header.scss';
+import useAnimateOnScroll from '../../hooks/useAnimateOnScroll';
 
 
 function Header() {
+useAnimateOnScroll()
+
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = React.useRef(null);
   const navigate = useNavigate(); 
@@ -51,10 +51,10 @@ function Header() {
      
       <div className="header-content">
         <div className="intro-text">
-          <h1>Hi, I m Sara</h1>
-          <h2>Junior Developer</h2>
-          <p>Engineering seamless solutions and memorable digital experiences.</p>
-        </div>
+        <h1 className="animated-text">Hi, je m'appelle Sara</h1> 
+    <h2 className="animated-text">Junior Developer</h2>
+    <p className="animated-text">Concevoir l'exceptionnel, au carrefour de la technologie et de la créativité, chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l'univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
+  </div>
         <div className="logo-container" onClick={handleEnterClick}>
           <img src={Logo} alt="Logo" className="rotating-logo" />
         </div>
