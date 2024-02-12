@@ -1,4 +1,3 @@
-
 .header {
   position: relative;
   width: 100vw;
@@ -11,98 +10,114 @@
   text-align: center;
   overflow: hidden;
 
-.header-content {
-  position: relative;
-  z-index: 1;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  .header-content {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-.intro-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    font-size: 1.25rem;
-    color: #cccccc;
-    max-width: 800px;
-    margin-bottom: 2rem;
-  }
-}
+  .intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      font-size: 1.25rem;
+      color: #cccccc;
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
 
-.logo-container {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  border-radius: 50%;
-  margin-top: 1.5rem;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: black;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
+    // Adjusting font sizes for smaller devices
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+      p { font-size: 1rem; }
+    }
+
+    // Further adjustments for very small devices
+    @media (max-width: 480px) {
+      h1 { font-size: 1.5rem; }
+      h2 { font-size: 1.25rem; }
+      p { font-size: 0.9rem; max-width: 90%; }
+    }
+  }
+
+  .logo-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
     border-radius: 50%;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.8);
-    animation: rotate 2s linear infinite;
-    z-index: -1;
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.8);
+      animation: rotate 2s linear infinite;
+      z-index: -1;
+    }
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+    
+    img.rotating-logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: opacity 0.3s ease;
+      opacity: 0.7;
+      &:hover { opacity: 1; }
+      z-index: 1;
+    }
   }
-  
-  &:hover {
-    transform: scale(1.1);
+
+  // Adjusting logo size for smaller devices
+  @media (max-width: 768px) {
+    .logo-container {
+      width: 50px;
+      height: 50px;
+    }
   }
-  
-  img.rotating-logo {
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  canvas.vanta-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    transition: opacity 0.3s ease;
-    opacity: 0.7;
-    &:hover {
-      opacity: 1;
-    }
-    z-index: 1;
+    z-index: 0;
   }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-canvas.vanta-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
 }

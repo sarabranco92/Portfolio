@@ -1,10 +1,16 @@
 .skills-container {
   .skills__header {
     text-align: center;
+   
   }
+ 
+
   .skills__title {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    @media (max-width: 576px) {
+      font-size: 1.5rem; // Smaller font size on phones
+    }
   }
 
   .skills__underline {
@@ -17,28 +23,28 @@
 
   .skills-layout {
     display: flex;
-    align-items: start;
- 
-    
+    flex-wrap: wrap; // Allow items to wrap on smaller screens
+    align-items: flex-start;
+
     .skills__image {
-      flex: 1;
+      flex: 1; // Take full width on small screens, adjusted below
       img {
         width: 100%;
         height: auto;
       }
     }
-    
+
     .skills-layout__list {
-      flex: 2;
+      flex: 2; // Take remaining space, adjusted below
       display: flex;
       flex-direction: column;
       margin: 0 10%;
-      
+
       .skills-layout__item {
         display: flex;
         align-items: center;
         margin-bottom: 1rem;
-        
+
         .skills-layout__bar {
           flex: 2;
           position: relative;
@@ -46,31 +52,32 @@
           background: rgba(17, 17, 17, .3);
           border-radius: 5px;
           overflow: hidden;
-          display: flex;
-          align-items: center;
-          
-        }
-          
-        .skills-layout__fill {
-          position: relative;
-          padding-top: 1%;
-          height: 100%;
-          width: 0; // Start with no width
-          background-color: inherit; // Inherits the background color
-          animation: animateSkill 2s forwards; // Animation for the fill
 
-          .skills-layout__name {
+          .skills-layout__fill {
             position: absolute;
-            left: 10px; // Padding from the left
-            color: white;
-            z-index: 2;
-          }
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0; // Start with no width
+            background-color: inherit; // Inherits the background color
+            animation: animateSkill 2s forwards;
 
-          .skills-layout__level {
-            position: absolute;
-            right: 10px; // Padding from the right
-            color: white;
-            z-index: 2;
+            .skills-layout__name,
+            .skills-layout__level {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              color: white;
+              z-index: 2;
+            }
+
+            .skills-layout__name {
+              left: 10px; // Padding from the left
+            }
+
+            .skills-layout__level {
+              right: 10px; // Padding from the right
+            }
           }
         }
       }
@@ -78,12 +85,33 @@
   }
 }
 
+@media (max-width: 750px) {
+  .skills-container {
+    .skills-layout {
+      flex-direction: column; // Stack the children vertically
+
+      .skills__image,
+      .skills-layout__list {
+        flex: none; // Override any flex-grow, flex-shrink, and flex-basis properties
+        width: 80%; // Take the full width of the container
+        margin: 0 10%; // Adjust margin as needed
+      }
+
+      .skills__image {
+        order: -1; // Ensures that the image is above the skill bars
+        margin-bottom: 1rem; 
+        width: 30%;
+        margin-left: 35% ;
+      }
+    }
+  }
+}
 
 @keyframes animateSkill {
-from {
-  width: 0;
-}
-to {
-  width: 100%; // Will grow to the max-width set by inline styles
-}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; // Will grow to the full width of its container
+  }
 }

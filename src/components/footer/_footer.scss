@@ -19,6 +19,7 @@
       margin: 10px 0;
       display: flex;
       align-items: center;
+      flex-wrap: wrap; // Ensure links wrap on smaller screens
 
       li {
         margin: 0 10px;
@@ -30,13 +31,8 @@
           width: 40px;
           height: 40px;
           border-radius: 50%;
+          color: #fff;
           border: 2px solid #fff;
-          
-          .fa-icon, .svg-inline--fa {
-            color: #fff;
-            width: auto;
-            height: 20px;
-          }
 
           &:hover, &:focus {
             background-color: #4d4855;
@@ -48,14 +44,26 @@
     }
 
     p {
-      margin-top: 20px; 
-      
+      margin-top: 20px;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .footer .footer-content {
-    flex-direction: column;
+  // Responsive adjustments for smaller screens
+  @media (max-width: 768px) {
+    padding: 10px 0; // Reduce padding on smaller screens
+
+    .footer-content {
+      // Already set to flex-direction: column; which is great for mobile
+      align-items: center; // Center content on smaller screens
+
+      .social-links {
+        justify-content: center; // Center social links on smaller screens
+        margin: 10px 0; // Adjust margin for visual spacing
+
+        li {
+          margin: 5px; // Reduce margin around links for tighter layout
+        }
+      }
+    }
   }
 }
