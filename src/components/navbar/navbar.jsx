@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "/assets/logo.png";
 import cvFile from '../../../public/assets/Sara_BrancoCV.pdf';
-import './_Navbar.scss';
+import './_navbar.scss';
 
 const sections = ['#presentation', '#portfolio', '#skills', '#contact'];
 
@@ -49,7 +49,7 @@ const Navbar = () => {
     };
   }, []);
 
-  // Function to toggle the mobile navigation
+  
   const toggleNav = () => {
     setIsNavExpanded(!isNavExpanded);
   };
@@ -70,7 +70,7 @@ const Navbar = () => {
               href={section}
               key={sectionId}
               className={`navbar__link ${activeSection === sectionId ? 'active' : ''}`}
-              onClick={() => setIsNavExpanded(false)} // Close the navbar when a link is clicked
+              onClick={() => setIsNavExpanded(false)} 
             >
               {sectionId.charAt(0).toUpperCase() + sectionId.slice(1)} 
             </a>
@@ -80,8 +80,8 @@ const Navbar = () => {
           href={cvFile}
           className="navbar__link"
           target="_blank"
-          rel="noopener noreferrer" // Important for security reasons
-          onClick={() => setIsNavExpanded(false)} // Close the navbar when the CV link is clicked
+          rel="noopener noreferrer" 
+          onClick={() => setIsNavExpanded(false)} 
         >
           CV
         </a>

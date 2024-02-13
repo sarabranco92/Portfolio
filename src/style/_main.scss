@@ -12,12 +12,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Indie Flower', cursive; // Ensure you have a fallback font
+  font-family: 'Indie Flower', cursive; 
   background-color: #686868;
   background-image: linear-gradient(315deg, #686868 0%, #ffffff 74%);
 }
 
-// Keyframes for sliding elements from the bottom
+
 @keyframes slideInFromBottom {
   from {
     opacity: 0;
@@ -29,7 +29,7 @@ body {
   }
 }
 
-// Apply the animation to elements with the .animate-on-scroll class
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(100px);
@@ -42,7 +42,7 @@ body {
 
 // Text typing effect
 .text-animate {
-  border-right: 2px solid transparent; // Simulate typing cursor
+  border-right: 2px solid transparent;
   white-space: nowrap;
   overflow: hidden;
 

@@ -1,5 +1,5 @@
 // src/components/MainContent.jsx
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../navbar/navbar';
 import Presentation from '../Presentation/presentation';
 import Portfolio from '../Portfolio/portfolio';
 import Skills from '../Skills/skills';
