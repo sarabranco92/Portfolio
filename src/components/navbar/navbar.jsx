@@ -49,10 +49,21 @@ const Navbar = () => {
     };
   }, []);
 
-  
+  // Function to toggle the mobile navigation
   const toggleNav = () => {
     setIsNavExpanded(!isNavExpanded);
   };
+
+
+
+    const handleClickScroll = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        // 👇 Will scroll smoothly to the top of the next section
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+  
 
   return (
     <nav className={`navbar ${isAfterVanta ? 'is-after-vanta' : ''}`}>
@@ -66,22 +77,17 @@ const Navbar = () => {
         {sections.map((section) => {
           const sectionId = section.replace('#', '');
           return (
-            <a
-              href={section}
-              key={sectionId}
-              className={`navbar__link ${activeSection === sectionId ? 'active' : ''}`}
-              onClick={() => setIsNavExpanded(false)} 
-            >
-              {sectionId.charAt(0).toUpperCase() + sectionId.slice(1)} 
-            </a>
+            <div onClick={() => handleClickScroll(sectionId)} key={sectionId}>
+            {sectionId.charAt(0).toUpperCase() + sectionId.slice(1)} 
+          </div>
           );
         })}
         <a
           href={cvFile}
           className="navbar__link"
           target="_blank"
-          rel="noopener noreferrer" 
-          onClick={() => setIsNavExpanded(false)} 
+          rel="noopener noreferrer" // Important for security reasons
+          onClick={() => setIsNavExpanded(false)} // Close the navbar when the CV link is clicked
         >
           CV
         </a>
