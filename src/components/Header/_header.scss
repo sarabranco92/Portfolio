@@ -43,14 +43,14 @@
       margin-bottom: 2rem;
     }
 
-    // Adjusting font sizes for smaller devices
+  
     @media (max-width: 768px) {
       h1 { font-size: 2rem; }
       h2 { font-size: 1.5rem; }
       p { font-size: 1rem; }
     }
 
-    // Further adjustments for very small devices
+
     @media (max-width: 480px) {
       h1 { font-size: 1.5rem; }
       h2 { font-size: 1.25rem; }
@@ -98,8 +98,7 @@
       z-index: 1;
     }
   }
-
-  // Adjusting logo size for smaller devices
+  
   @media (max-width: 768px) {
     .logo-container {
       width: 50px;
@@ -107,11 +106,7 @@
     }
   }
 
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
+  
   canvas.vanta-canvas {
     position: absolute;
     top: 0;

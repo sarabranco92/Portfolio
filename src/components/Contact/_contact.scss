@@ -1,5 +1,10 @@
+.section {
+  min-height: 100vh; /* 100% of the viewport height */
+}
+
+
 .contact {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -9,7 +14,7 @@
     color: #2c2c2c;
 
     @media (max-width: 576px) {
-      font-size: 1.5rem; // Smaller font size on phones
+      font-size: 1.5rem; 
     }
   }
 

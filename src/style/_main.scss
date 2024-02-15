@@ -1,4 +1,4 @@
-// Box-sizing border-box for all elements
+
 *,
 *::before,
 *::after {
@@ -6,7 +6,7 @@
 }
 
 html {
-  overflow-y: scroll; // Ensure consistent scrollbar behavior across browsers
+  overflow-y: scroll; 
 }
 
 body {
@@ -16,6 +16,7 @@ body {
   background-color: #686868;
   background-image: linear-gradient(315deg, #686868 0%, #ffffff 74%);
 }
+
 
 
 @keyframes slideInFromBottom {

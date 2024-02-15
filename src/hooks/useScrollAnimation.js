@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 
 const useScrollAnimation = () => {
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,3 +28,5 @@ const useScrollAnimation = () => {
 };
 
 export default useScrollAnimation;
+
+

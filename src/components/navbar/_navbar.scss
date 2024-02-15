@@ -9,8 +9,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   z-index: 1000;
-  position: relative;
+  position: fixed;
   top: 0;
+  left: 0;
+  
 
   @media (max-width: 768px) {
     padding: 1rem 0.5rem;
@@ -43,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
 
   @media (max-width: 768px) {
     display: none;

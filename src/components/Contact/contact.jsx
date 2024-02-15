@@ -31,7 +31,7 @@ function Contact() {
 
   return (
 <section id="contact" className="contact animate-on-scroll">
-      <h2 className="contact__title text-animate" data-text="Collaborez avec moi"></h2>
+      <h2 className="contact__title">Collaborez avec moi</h2>
       <div className="contact__underline text-animate"></div>
       {submitStatus.message && (
         <div className={`contact__alert ${submitStatus.status === 'success' ? 'contact__alert--success' : 'contact__alert--error'}`}>

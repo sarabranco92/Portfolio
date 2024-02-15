@@ -1,3 +1,8 @@
+.section {
+  min-height: 100vh; /* 100% of the viewport height */
+}
+
+
 .portfolio {
   padding: 4rem 0;
   text-align: center;
@@ -35,16 +40,7 @@
    
   }
 
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0;
-
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    padding: 0;
-  }
+  
   &__item {
     cursor: pointer;
     max-width: 20rem;
@@ -74,8 +70,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw; 
+    height: 100vh; 
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
@@ -96,7 +92,7 @@
     align-items: flex-start;
     overflow: hidden;
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       padding: 1rem; // Reduce padding on smaller screens
     }
 
@@ -105,7 +101,7 @@
       justify-content: center;
       align-items: center;
       padding: 5rem 1rem; // Even smaller padding for mobile
-      width: 90%; // Allow modal to take up more space on mobile
+      width: 80%; // Allow modal to take up more space on mobile
     }
 
 
@@ -201,7 +197,7 @@
 
 @media (max-width: 900px) {
   &__grid {
-    padding: 0 10rem; // Reduced padding for smaller screens
+    padding: 0 2rem; // Reduced padding for smaller screens
     grid-template-columns: repeat(2, 1fr); // Two columns for tablets
   }
 }

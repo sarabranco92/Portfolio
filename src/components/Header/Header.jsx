@@ -51,9 +51,9 @@ useAnimateOnScroll()
      
       <div className="header-content">
         <div className="intro-text">
-        <h1 className="animated-text">Hi, je m'appelle Sara</h1> 
-    <h2 className="animated-text">Junior Developer</h2>
-    <p className="animated-text">Concevoir l'exceptionnel, au carrefour de la technologie et de la créativité, chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l'univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
+        <h1 className="text-animate">Hi, je m'appelle Sara</h1> 
+    <h2 className="text-animate">Junior Developer</h2>
+    <p className="text-animate">Concevoir l'exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l'univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
   </div>
         <div className="logo-container" onClick={handleEnterClick}>
           <img src={Logo} alt="Logo" className="rotating-logo" />

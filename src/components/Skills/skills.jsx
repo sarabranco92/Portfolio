@@ -33,9 +33,9 @@ function Skills() {
   }, []);
 
   return (
-<div id="skills" className="skills-container animate-on-scroll">
+<section id="skills" className="skills-container animate-on-scroll">
       <div className="skills__header">
-        <h2 className="skills__title text-animate" data-text="Compétences"></h2>
+        <h2 className="skills__title text-animate">Mes Compétences</h2>
         <div className="skills__underline"></div>
       </div>
       <div className="skills-layout">
@@ -58,7 +58,7 @@ function Skills() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

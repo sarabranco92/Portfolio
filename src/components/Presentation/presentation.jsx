@@ -1,16 +1,29 @@
-// src/components/Presentation.jsx
+
 import React from 'react';
 import './_presentation.scss';
+import myImage from '../../../public/assets/photo.png';
 
 function Presentation() {
   return (
 <section id="presentation" className="presentation">
       <div className="presentation__header">
-        <h2 className="presentation__title text-animate" data-text= "À propos de moi"></h2>
+        <h2 className="presentation__title">À propos de moi</h2>
         <div className="presentation__underline text-animate"></div>
       </div>
+      <div className="presentation__body">
+      <div className="presentation__image">
+          <img src={myImage} alt="Sara" />
+        </div>
       <div className="presentation__content">
-        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+     
+  <h3>Je m'appelle Sara,</h3>
+  <p>Je suis une développeuse web passionnée avec une affinité particulière pour le Frontend. Mon parcours dans l'univers de la technologie a commencé récemment, et chaque projet est pour moi une nouvelle aventure.</p>
+  
+  <p>Quand ma fascination pour la programmation a débuté, j'ai rapidement découvert que coder n'était pas seulement une compétence, mais un art qui permet de transformer des idées abstraites en réalités tangibles.</p>
+
+
+  <p>Je suis toujours à la recherche de nouveaux défis et de possibilités de croissance. Si vous avez un projet passionnant en tête, <span>n'hésitez pas à me contacter</span>. Ensemble, transformons votre vision en une solution digitale élégante et performante.</p>
+      </div>
       </div>
     </section>
   );
