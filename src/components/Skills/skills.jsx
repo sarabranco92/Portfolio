@@ -16,6 +16,7 @@ function Skills() {
     setSkills(skillsData);
 
     const handleScroll = () => {
+      const skillsSection = skillsContainerRef.current;
       const scrollPosition = window.scrollY + window.innerHeight;
     
       if (skillsSection && scrollPosition >= skillsSection.offsetTop) {
@@ -26,6 +27,11 @@ function Skills() {
     };
     
     window.addEventListener('scroll', handleScroll);
+    
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
     
   }, []);
 

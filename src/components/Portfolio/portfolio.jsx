@@ -33,16 +33,19 @@ function Portfolio() {
             <span className="portfolio__modal-close" onClick={closeModal}>&times;</span>
             <div className="portfolio__modal-column">
               <img src={selectedProject.modalImage} alt={selectedProject.title} className="portfolio__modal-img" />
-              <ul className="portfolio__modal-technologies">
-                {selectedProject.technologies.map((tech, index) => (
-                  <li key={index}>{tech}</li>
-                ))}
-              </ul>
+              <a href={selectedProject.url} className="portfolio__modal-visit" target="_blank" rel="noopener noreferrer">VISITER LE SITE</a>
             </div>
             <div className="portfolio__modal-center">
               <h3 className="portfolio__modal-title">{selectedProject.title}</h3>
               <p className="portfolio__modal-description">{selectedProject.description}</p>
-              <a href={selectedProject.url} className="portfolio__modal-visit" target="_blank" rel="noopener noreferrer">VISITER LE SITE</a>
+              <ul className="portfolio__modal-technologies">
+                {selectedProject.technologies.map((tech, index) => (
+                  <li key={index} className="portfolio__tech-item">
+                    <img src={tech.image} alt={tech.name} className="portfolio__tech-icon" />
+                  </li>
+                ))}
+              </ul>
+
             </div>
           </div>
         </div>

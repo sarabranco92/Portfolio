@@ -4,7 +4,13 @@
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  width: 100vw; /* Faz o footer ter a largura total da viewport */
+  position: relative; /* Se necessário, dependendo de outros estilos da página */
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
 
+  
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -48,17 +54,13 @@
     }
   }
 
-  // Responsive adjustments for smaller screens
   @media (max-width: 768px) {
-    padding: 10px 0; // Reduce padding on smaller screens
-
+    padding: 10px 0; 
     .footer-content {
-      // Already set to flex-direction: column; which is great for mobile
-      align-items: center; // Center content on smaller screens
-
+      align-items: center; 
       .social-links {
-        justify-content: center; // Center social links on smaller screens
-        margin: 10px 0; // Adjust margin for visual spacing
+        justify-content: center; 
+        margin: 10px 0; 
 
         li {
           margin: 5px; // Reduce margin around links for tighter layout

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './_presentation.scss';
-import myImage from '../../../public/assets/photo.png';
+import myImage from '../../../public/assets/photo.webp';
 
 function Presentation() {
   return (
@@ -16,7 +16,6 @@ function Presentation() {
         </div>
       <div className="presentation__content">
      
-  <h3>Je m'appelle Sara,</h3>
   <p>Je suis une développeuse web passionnée avec une affinité particulière pour le Frontend. Mon parcours dans l'univers de la technologie a commencé récemment, et chaque projet est pour moi une nouvelle aventure.</p>
   
   <p>Quand ma fascination pour la programmation a débuté, j'ai rapidement découvert que coder n'était pas seulement une compétence, mais un art qui permet de transformer des idées abstraites en réalités tangibles.</p>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import BIRDS from 'vanta/dist/vanta.birds.min';
-import Logo from '../../../public/assets/logo.png'; 
+import Logo from '../../../public/assets/logo.webp'; 
 import "../../style/_main.scss"
 import './_header.scss';
 

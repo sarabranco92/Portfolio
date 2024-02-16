@@ -2,47 +2,66 @@
     {
       "id": 1,
       "title": "Booki",
-      "description": "Ce projet consiste à intégrer l'interface d'un site permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix, en utilisant du code HTML et CSS.",
-      "image": "./assets/projets/bookiLogo.png",
-      "modalImage": "./assets/projets/bookiSite.png",
-      "technologies": ["Technology 1", "Technology 2"],
+      "description": "Le projet met l'accent sur la création d'une interface utilisateur cohérente et conforme aux maquettes fournies, tout en respectant les bonnes pratiques de codage et les contraintes techniques établies.",
+      "image": "./assets/projets/bookiLogo.webp",
+      "modalImage": "./assets/projets/bookiSite.webp",
+      "technologies": [
+        {"name": "HTML5", "image": "./assets/skills/html.webp"},
+        {"name": "CSS3", "image": "./assets/skills/css.webp"}
+      ],
       "url": "https://sarabranco92.github.io/Booki/"
     },
     {
       "id": 2,
       "title": "ohmyfood",
-      "description": "A brief description of Project Two.",
-      "image": "./assets/projets/ohmyfoodLogo.png",
-      "modalImage": "./assets/projets/ohmyfoodSite.png",
-      "technologies": ["Technology 1", "Technology 2"],
+      "description": "Le projet se concentre sur la création d'un site responsive, conçu en mobile-first, et incluant des animations CSS sophistiquées. Vous travaillerez à partir des maquettes fournies pour créer un site adaptatif pour mobile, tablette et desktop.",
+      "image": "./assets/projets/ohmyfoodLogo.webp",
+      "modalImage": "./assets/projets/ohmyfoodSite.webp",
+      "technologies": [
+        {"name": "figma", "image": "./assets/skills/figma.webp"},
+        {"name": "sass", "image": "./assets/skills/sass.webp"}
+      ],     
       "url": "https://sarabranco92.github.io/ohmyfoodOC/"
     },
     {
       "id": 3,
       "title": "Nina Carducci",
-      "description": "A brief description of Project Three.",
-      "image": "./assets/projets/ninacarducciLogo.png",
-      "modalImage": "./assets/projets/ninacarducciSite.png",
-      "technologies": ["Technology 1", "Technology 2"],
+      "description": "Le projet se concentre sur la fourniture de fonctionnalités essentielles pour garantir des interactions utilisateurs sécurisées et efficaces à travers une stratégie SEO complète.",
+      "image": "./assets/projets/ninacarducciLogo.webp",
+      "modalImage": "./assets/projets/ninacarducciSite.webp",
+      "technologies": [
+        {"name": "lighthouse", "image": "./assets/skills/lighthouse.webp"},
+        {"name": "wave", "image": "./assets/skills/wave.webp"}
+      ],
       "url": "https://sarabranco92.github.io/ninacarducci/"
     },
    
       {
         "id": 4,
         "title": "Kasa",
-        "description": "A brief description of Project Three.",
-        "image": "./assets/projets/kasaLogo.png",
-        "modalImage": "./assets/projets/kasaSite.png",
-        "technologies": ["Technology 1", "Technology 2"],
+        "description": "Ce projet se concentre sur une refonte complète du site web existant. Il implique l'initialisation d'un projet React, le développement de l'ensemble de l'application y compris les composants React, ainsi que la mise en place des routes avec React Router. Tout cela en respectant fidèlement les maquettes responsives fournies sur Figma ainsi que les spécifications techniques détaillées.",
+        "image": "./assets/projets/kasaLogo.webp",
+        "modalImage": "./assets/projets/kasaSite.webp",
+        "technologies": [
+          {"name": "JavaScript", "image": "./assets/skills/js.webp"},
+          {"name": "React", "image": "./assets/skills/react.webp"},
+          {"name": "GitHub", "image": "./assets/skills/git.webp"}
+
+        ],        
         "url": "https://sarabranco92.github.io/Kasa-react/"
       },
       {
         "id": 5,
         "title": "Argent Bank",
-        "description": "A brief description of Project Three.",
-        "image": "./assets/projets/argentbankLogo.png",
-        "modalImage": "./assets/projets/argentbankSite.png",
-        "technologies": ["Technology 1", "Technology 2"],
+        "description": "Ce projet implique la création d'un système d'authentification des utilisateurs et la conception d'APIs et mettre en œuvre des fonctionnalités essentielles pour des interactions utilisateurs sécurisées et efficaces.",
+        "image": "./assets/projets/argentbankLogo.webp",
+        "modalImage": "./assets/projets/argentbankSite.webp",
+        "technologies": [
+          {"name": "Nodejs", "image": "./assets/skills/node.webp"},
+          {"name": "Redux", "image": "./assets/skills/redux.webp"},
+          {"name": "Swagger", "image": "./assets/skills/swagger.webp"},
+          {"name": "mongodb", "image": "./assets/skills/mongodb.webp"}
+        ],
         "url": "https://sarabranco92.github.io/argent-bank/"
       }
    
