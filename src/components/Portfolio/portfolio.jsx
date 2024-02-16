@@ -7,14 +7,16 @@ function Portfolio() {
 
   const openModal = (project) => {
     setSelectedProject(project);
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setSelectedProject(null);
+    document.body.style.overflow = 'auto';
   };
 
   return (
-<section id="portfolio" className="portfolio animate-on-scroll">
+<section id="portfolio" className="portfolio">
       <h2 className="portfolio__title">Mes Projets</h2>
       <div className="portfolio__underline"></div>
       <div className="portfolio__grid">

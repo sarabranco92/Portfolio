@@ -1,15 +1,12 @@
-.section {
-  min-height: 100vh; /* 100% of the viewport height */
-}
-
 
 .contact {
   padding: 4rem 2rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 
   &__title {
-    font-size: 2rem; // Adjust font size for smaller devices
+    font-size: 2rem; 
     margin-bottom: 0.5rem;
     color: #2c2c2c;
 
@@ -31,7 +28,7 @@
     margin: 0 auto;
 
     @media (max-width: 576px) {
-      max-width: 90%; // Use more of the screen on smaller devices
+      max-width: 90%; 
     }
   }
 
@@ -45,7 +42,7 @@
     font-size: 1rem;
 
     @media (max-width: 576px) {
-      font-size: 0.9rem; // Slightly smaller font size on phones
+      font-size: 0.9rem; 
     }
   }
 
@@ -54,7 +51,7 @@
     resize: vertical; 
 
     @media (max-width: 576px) {
-      height: 150px; // Less height on smaller devices for better fit
+      height: 150px; 
     }
   }
 
@@ -74,8 +71,8 @@
     }
 
     @media (max-width: 576px) {
-      padding: 0.8rem 1.5rem; // Smaller padding on phones
-      font-size: 0.9rem; // Smaller button text on phones
+      padding: 0.8rem 1.5rem; 
+      font-size: 0.9rem; 
     }
   }
 }

@@ -1,13 +1,7 @@
-.section {
-  min-height: 100vh; /* 100% of the viewport height */
-}
-
 
 .skills-container {
   .skills__header {
     text-align: center;
-    
-   
   }
  
 
@@ -74,7 +68,7 @@
               top: 50%;
               transform: translateY(-50%);
               color: white;
-              z-index: 2;
+            
             }
 
             .skills-layout__name {

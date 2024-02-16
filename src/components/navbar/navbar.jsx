@@ -9,7 +9,7 @@ const sections = ['#presentation', '#portfolio', '#skills', '#contact'];
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
   const [isAfterVanta, setIsAfterVanta] = useState(false);
-  const [isNavExpanded, setIsNavExpanded] = useState(false); // New state for mobile nav expansion
+  const [isNavExpanded, setIsNavExpanded] = useState(false); 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,7 +59,7 @@ const Navbar = () => {
     const handleClickScroll = (sectionId) => {
       const element = document.getElementById(sectionId);
       if (element) {
-        // 👇 Will scroll smoothly to the top of the next section
+        
         element.scrollIntoView({ behavior: 'smooth' });
       }
     };
@@ -86,7 +86,7 @@ const Navbar = () => {
           href={cvFile}
           className="navbar__link"
           target="_blank"
-          rel="noopener noreferrer" // Important for security reasons
+          rel="noopener noreferrer" // security reasons
           onClick={() => setIsNavExpanded(false)} // Close the navbar when the CV link is clicked
         >
           CV

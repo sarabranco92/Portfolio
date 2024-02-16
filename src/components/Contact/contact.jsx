@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './_contact.scss';
 
@@ -6,6 +6,15 @@ function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitStatus, setSubmitStatus] = useState({ status: '', message: '' });
 
+  const contactRef = useRef(null);
+
+useEffect(() => {
+    if (contactRef.current) {
+      contactRef.current.style.zIndex = null; 
+    }
+  }, []);
+
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -13,7 +22,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Remplacez les valeurs ci-dessous par les identifiants EmailJS réels
+//identifiants EmailJS
     const serviceID = '21712';
     const templateID = 'temp1';
     const userID = 'P9QJKctqmf7zHXkq8';
@@ -30,7 +39,7 @@ function Contact() {
   };
 
   return (
-<section id="contact" className="contact animate-on-scroll">
+<section id="contact" ref={contactRef} className="contact">
       <h2 className="contact__title">Collaborez avec moi</h2>
       <div className="contact__underline text-animate"></div>
       {submitStatus.message && (

@@ -1,10 +1,5 @@
-.section {
-  min-height: 100vh; /* 100% of the viewport height */
-}
-
 
 .portfolio {
-  padding: 4rem 0;
   text-align: center;
 
   &__underline,
@@ -19,7 +14,7 @@
     margin-bottom: 0.5rem;
     color: #2c2c2c;
     @media (max-width: 576px) {
-      font-size: 1.5rem; // Smaller font size on phones
+      font-size: 1.5rem; 
     }
   }
 
@@ -77,12 +72,13 @@
     justify-content: center;
     align-items: center;
     z-index: 1001;
+    overflow-y: auto;
   }
 
   &__modal-content {
     position: relative;
     background-color: #686868;
-  background-image: linear-gradient(315deg, #686868 0%, #ffffff 74%);
+    background-image: linear-gradient(315deg, #686868 0%, #ffffff 74%);
     border-radius: 5px;
     padding: 2rem;
     width: 60%;
@@ -92,16 +88,12 @@
     align-items: flex-start;
     overflow: hidden;
 
-    @media (max-width: 980px) {
-      padding: 1rem; // Reduce padding on smaller screens
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 5rem 1rem; // Even smaller padding for mobile
-      width: 80%; // Allow modal to take up more space on mobile
+      width: 90%; 
+      height: 80%;
     }
 
 
@@ -130,13 +122,6 @@
     align-items: flex-start;
     justify-content: center;
     margin-right: 2rem; 
-    
-    @media (max-width: 600px) {
-      flex-direction: column;
-  margin: 0;
-      align-items: center;
-      
-    }
   }
 
  
@@ -156,6 +141,7 @@
     max-width: 100%; 
     height: auto; 
     margin-bottom: 1rem;
+
   }
 
   &__modal-technologies {
@@ -185,27 +171,28 @@
 
   &__modal-visit {
     display: flex;
-    color: #3a88f4;
-    text-decoration: none;
+    color: #191a1b;
+    text-decoration:none;
     border-radius: 4px;
     padding: 5rem 1 rem;
     &:hover {
-      background-color: #f0f0f0;
+      transform: scale(1.1); 
+      font-weight: bolder;
     }
   }
 
 
 @media (max-width: 900px) {
   &__grid {
-    padding: 0 2rem; // Reduced padding for smaller screens
-    grid-template-columns: repeat(2, 1fr); // Two columns for tablets
+    padding: 0 2rem; 
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 600px) {
   &__grid {
-    padding: 0 5rem; // Further reduced padding for mobile screens
-    grid-template-columns: 1fr; // One column for mobile
+    padding: 0 5rem; 
+    grid-template-columns: 1fr; 
   }
 }
 }

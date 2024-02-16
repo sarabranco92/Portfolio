@@ -5,11 +5,9 @@ import BIRDS from 'vanta/dist/vanta.birds.min';
 import Logo from '../../../public/assets/logo.png'; 
 import "../../style/_main.scss"
 import './_header.scss';
-import useAnimateOnScroll from '../../hooks/useAnimateOnScroll';
 
 
 function Header() {
-useAnimateOnScroll()
 
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = React.useRef(null);
@@ -31,7 +29,7 @@ useAnimateOnScroll()
         color2: 0xb10000,
         birdSize: 0.50,
         wingSpan: 10.00,
-        speedLimit: 2.00,
+        speedLimit: 1.00,
         separation: 11.00,
         alignment: 50.00,
         cohesion: 100.00
@@ -51,9 +49,9 @@ useAnimateOnScroll()
      
       <div className="header-content">
         <div className="intro-text">
-        <h1 className="text-animate">Hi, je m'appelle Sara</h1> 
-    <h2 className="text-animate">Junior Developer</h2>
-    <p className="text-animate">Concevoir l'exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l'univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
+        <h1 >Hi, je m'appelle Sara</h1> 
+    <h2>Junior Developer</h2>
+    <p>Concevoir l'exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l'univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
   </div>
         <div className="logo-container" onClick={handleEnterClick}>
           <img src={Logo} alt="Logo" className="rotating-logo" />
