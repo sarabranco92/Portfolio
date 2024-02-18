@@ -44,8 +44,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  margin-right: 10%; // Adjusted for better alignment and spacing
+  font-size: 16px;
+  margin-right: 10%; 
 
   @media (max-width: 768px) {
     display: none;
@@ -63,25 +63,26 @@
     &.is-expanded {
       display: flex;
       transform: translateY(0);
+      margin: 0;
     }
   }
 }
 
 .navbar__link,
-.navbar__links div { // Unified styling for links and divs
+.navbar__links div { 
   margin: 0 1rem;
   text-decoration: none;
   color: #515051;
   font-weight: bold;
-  transition: color 0.3s ease; // Simplified transitions
+  transition: color 0.3s ease; 
   padding: 0.5rem 1rem;
   cursor: pointer;
 
-  &:hover, // Simplified hover and active states
+  &:hover, 
   &.active {
     color: #fff;
     background: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-    border-radius: 5px; // Adjusted for a more subtle effect
+    border-radius: 5px; 
   }
 
   @media (max-width: 768px) {
