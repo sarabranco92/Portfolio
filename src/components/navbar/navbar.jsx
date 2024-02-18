@@ -9,7 +9,7 @@ const sections = ['#presentation', '#portfolio', '#skills', '#contact'];
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
   const [isAfterVanta, setIsAfterVanta] = useState(false);
-  const [isNavExpanded, setIsNavExpanded] = useState(false); 
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,21 +49,25 @@ const Navbar = () => {
     };
   }, []);
 
-  // Function to toggle the mobile navigation
   const toggleNav = () => {
     setIsNavExpanded(!isNavExpanded);
   };
 
+  const handleClickScroll = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 70; // Altura do cabeçalho
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
 
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
 
-    const handleClickScroll = (sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
-  
+    setIsNavExpanded(false); // Para fechar o menu em mobile
+  }
+};
 
   return (
     <nav className={`navbar ${isAfterVanta ? 'is-after-vanta' : ''}`}>
@@ -71,23 +75,27 @@ const Navbar = () => {
         <img src={Logo} alt="Logo" />
       </Link>
       <button className="navbar__toggle" onClick={toggleNav}>
-        <i className="fas fa-bars"></i> 
+        <i className="fas fa-bars"></i>
       </button>
       <div className={`navbar__links ${isNavExpanded ? 'is-expanded' : ''}`}>
         {sections.map((section) => {
           const sectionId = section.replace('#', '');
           return (
-            <div onClick={() => handleClickScroll(sectionId)} key={sectionId}>
-            {sectionId.charAt(0).toUpperCase() + sectionId.slice(1)} 
-          </div>
+            <div 
+              className={`navbar__link ${activeSection === sectionId ? 'active' : ''}`}
+              onClick={() => handleClickScroll(sectionId)} 
+              key={sectionId}
+            >
+              {sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}
+            </div>
           );
         })}
         <a
           href={cvFile}
           className="navbar__link"
           target="_blank"
-          rel="noopener noreferrer" // security reasons
-          onClick={() => setIsNavExpanded(false)} // Close the navbar when the CV link is clicked
+          rel="noopener noreferrer"
+          onClick={() => setIsNavExpanded(false)}
         >
           CV
         </a>

@@ -4,19 +4,38 @@
   box-sizing: border-box;
 }
 
+:root {
+  --section-spacing: 10rem;
+  @media (max-width: 768px) {
+    :root {
+      --section-spacing: 2rem; /* Smaller spacing for mobile devices */
+    }
+  }
+}
+
+// Basic HTML and body styling adjustments for a clean and uniform starting point
 html {
-  overflow-y: scroll;
+  overflow-y: scroll; // Ensures scrollbar is always present to prevent layout shifts
+  scroll-behavior: smooth; // Smooth scrolling for anchor links
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #686868;
-  background-image: linear-gradient(315deg, #686868 0%, #ffffff 74%);
+  background-color: #686868; // A neutral starting color
+  background-image: linear-gradient(315deg, #686868 0%, #ffffff 74%); // Aesthetic background gradient
+  font-family: 'Open Sans', sans-serif; // Example of setting a default font
+  color: #333; // Default text color for good contrast
+  line-height: 1.6; // Default line height for readability
 }
 
+// Centered container for content with responsive padding
 .background {
-  max-width: 1800px; /* Ajuste a largura máxima conforme necessário */
-  margin: auto; /* Centraliza o conteúdo na página */
-  padding: 0 20px; /* Adicione padding conforme necessário para o conteúdo não tocar as bordas da tela */
+  max-width: 1800px; // Maximum width for content centering
+  margin: auto; // Centers the content block horizontally
+  padding: 0 20px; // Responsive padding for spacing from viewport edges
+
+  @media (max-width: 768px) {
+    padding: 0; // Reduced padding for smaller screens
+  }
 }

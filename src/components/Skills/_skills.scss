@@ -1,6 +1,9 @@
-.skills{
-  margin: 10rem 0rem;
+section {
+  margin-top: var(--section-spacing);
+  margin-bottom: var(--section-spacing);
 }
+
+
 .skills-container {
   .skills__header {
     text-align: center;
@@ -22,6 +25,10 @@
     height: 4px;
     background-color: #2c2c2c;
     margin-bottom: 4rem;
+
+    @media (max-width: 576px) {
+      margin-bottom: 1rem; // Smaller font size on phones
+    }
   }
 
   .skills-layout {
@@ -71,6 +78,7 @@
               top: 50%;
               transform: translateY(-50%);
               color: white;
+              font-weight: bold;
             
             }
 

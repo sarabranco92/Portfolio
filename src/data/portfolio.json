@@ -39,7 +39,7 @@
       {
         "id": 4,
         "title": "Kasa",
-        "description": "Ce projet se concentre sur une refonte complète du site web existant. Il implique l'initialisation d'un projet React, le développement de l'ensemble de l'application y compris les composants React, ainsi que la mise en place des routes avec React Router. Tout cela en respectant fidèlement les maquettes responsives fournies sur Figma ainsi que les spécifications techniques détaillées.",
+        "description": "Ce projet se concentre sur une refonte complète du site web existant. Il implique l'initialisation d'un projet React, le développement de l'ensemble de l'application y compris les composants React, ainsi que la mise en place des routes avec React Router.",
         "image": "./assets/projets/kasaLogo.webp",
         "modalImage": "./assets/projets/kasaSite.webp",
         "technologies": [

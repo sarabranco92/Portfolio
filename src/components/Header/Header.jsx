@@ -54,7 +54,7 @@ function Header() {
     <p>Concevoir l'exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l'univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
   </div>
         <div className="logo-container" onClick={handleEnterClick}>
-          <img src={Logo} alt="Logo" className="rotating-logo" />
+          <img src={Logo} loading="lazy" alt="Logo" className="rotating-logo" />
         </div>
       </div>
     </div>

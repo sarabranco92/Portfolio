@@ -12,7 +12,7 @@ function Presentation() {
       </div>
       <div className="presentation__body">
       <div className="presentation__image">
-          <img src={myImage} alt="Sara" />
+          <img src={myImage} loading="lazy" alt="Sara" />
         </div>
       <div className="presentation__content">
      

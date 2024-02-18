@@ -1,42 +1,38 @@
 .navbar {
   width: 100%;
-  background-color: #000;
-  background-image: linear-gradient(315deg, #a3a3a3 0%, #ffffff 74%);
+  background: linear-gradient(315deg, #a3a3a3 0%, #ffffff 74%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: padding 0.3s ease; // Simplified to only necessary property
   z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
-  
 
   @media (max-width: 768px) {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
+    background: linear-gradient(315deg, #4d4855 0%, #000000 74%);
+
   }
 }
 
 .navbar__logo img {
-  width: 42px;
-  border-color:goldenrod;
-  display: block;
-  
-
+  width: 42px; // Consistent with other elements
 
   @media (max-width: 768px) {
-    width: 25px;
+    width: 30px;
+    border-color: #fff;
   }
 }
 
 .navbar__toggle {
-  display: none;
+  display: none; // Hidden by default
   cursor: pointer;
   font-size: 1rem;
-  background-color: #4d4855;
-  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+  background: linear-gradient(147deg, #4d4855 0%, #000000 74%);
   color: white;
 
   @media (max-width: 768px) {
@@ -48,17 +44,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  margin-right: 15rem;
+  font-size: 18px;
+  margin-right: 10%; // Adjusted for better alignment and spacing
 
   @media (max-width: 768px) {
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     position: absolute;
     top: 100%;
-    left: 0;
-    background-color: #000;
+    right: 0;
+    font-size: 16px;
+    border-radius: 5% 0 0 5%;
+
+    background: linear-gradient(147deg, #4d4855 0%, #000000 74%);
     transition: transform 0.3s ease;
 
     &.is-expanded {
@@ -69,14 +68,21 @@
 }
 
 .navbar__link,
-.navbar__links div { // Adjusted for divs acting as section links
+.navbar__links div { // Unified styling for links and divs
   margin: 0 1rem;
   text-decoration: none;
   color: #515051;
   font-weight: bold;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease; // Simplified transitions
   padding: 0.5rem 1rem;
-  cursor: pointer; // Ensure it's clear these are clickable
+  cursor: pointer;
+
+  &:hover, // Simplified hover and active states
+  &.active {
+    color: #fff;
+    background: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+    border-radius: 5px; // Adjusted for a more subtle effect
+  }
 
   @media (max-width: 768px) {
     margin: 0.5rem 0;
@@ -84,14 +90,4 @@
     width: 100%;
     text-align: center;
   }
-}
-
-.navbar__link:hover,
-.navbar__links div:hover, // Hover effect for section divs
-.navbar__link.active,
-.navbar__links div.active { // Active state styling
-  color: #fff;
-  background-color: #4d4855;
-  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-  border-radius: 10%;
 }
