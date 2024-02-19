@@ -1,27 +1,38 @@
-import React, { useState } from 'react';
+// Importações necessárias
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos'; // Importe o AOS
+import 'aos/dist/aos.css'; // Importe o CSS do AOS
 import projectData from '../../data/portfolio.json';
-import './_portfolio.scss';
+import './_portfolio.scss'; // Certifique-se de que o caminho está correto
 
 function Portfolio() {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  useEffect(() => {
+    // Inicialize o AOS quando o componente montar
+    AOS.init({
+      duration: 1000, // Configura a duração das animações para 1 segundo
+      once: true, // As animações só acontecem uma vez ao fazer scroll
+    });
+  }, []);
+
   const openModal = (project) => {
     setSelectedProject(project);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'; // Impede o scroll quando o modal está aberto
   };
 
   const closeModal = () => {
     setSelectedProject(null);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'auto'; // Permite o scroll quando o modal é fechado
   };
 
   return (
-<section id="portfolio" className="portfolio">
-      <h2 className="portfolio__title">Mes Projets</h2>
-      <div className="portfolio__underline"></div>
+    <section id="portfolio" className="portfolio">
+      <h2 className="portfolio__title" data-aos="fade-up">Mes Projets</h2>
+      <div className="portfolio__underline" data-aos="fade-up"></div>
       <div className="portfolio__grid">
-        {projectData.map((project) => (
-          <div key={project.id} className="portfolio__item" onClick={() => openModal(project)}>
+        {projectData.map((project, index) => (
+          <div key={project.id} className="portfolio__item" data-aos="fade-up" data-aos-delay={`${index * 100}`} onClick={() => openModal(project)}>
             <img src={project.image} alt={project.title} className="portfolio__image" />
           </div>
         ))}
@@ -45,7 +56,6 @@ function Portfolio() {
                   </li>
                 ))}
               </ul>
-
             </div>
           </div>
         </div>

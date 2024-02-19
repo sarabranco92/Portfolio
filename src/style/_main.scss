@@ -5,10 +5,10 @@
 }
 
 :root {
-  --section-spacing: 10rem;
+  --section-spacing: 8rem;
   @media (max-width: 768px) {
     :root {
-      --section-spacing: 2rem; 
+      --section-spacing: 0rem; 
     }
   }
 }

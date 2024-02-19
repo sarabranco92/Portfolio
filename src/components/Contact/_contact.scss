@@ -22,7 +22,7 @@ section {
     width: 100px;
     height: 4px;
     background-color: #2c2c2c;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 576px) {
       margin-bottom: 1rem; // Smaller font size on phones
@@ -82,3 +82,24 @@ section {
     }
   }
 }
+.contact__response-message {
+  margin: 0.5rem auto; 
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%; 
+  max-width: 600px; 
+
+  &--success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+
+  &--error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+}
+
