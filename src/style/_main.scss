@@ -6,6 +6,7 @@
 
 :root {
   --section-spacing: 8rem;
+  --section-color: black;
   @media (max-width: 768px) {
     :root {
       --section-spacing: 0rem; 

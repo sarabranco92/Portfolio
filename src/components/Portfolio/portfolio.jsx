@@ -12,7 +12,7 @@ function Portfolio() {
     // Inicialize o AOS quando o componente montar
     AOS.init({
       duration: 1000, // Configura a duração das animações para 1 segundo
-      once: true, // As animações só acontecem uma vez ao fazer scroll
+      once: false, // As animações só acontecem uma vez ao fazer scroll
     });
   }, []);
 
