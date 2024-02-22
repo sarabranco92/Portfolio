@@ -1,22 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Make sure AOS styles are imported
-import './_contact.scss'; // Your custom styles
+import { useState} from 'react';
+import 'aos/dist/aos.css'; 
+import './_contact.scss'; 
 
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitStatus, setSubmitStatus] = useState('');
 
-  useEffect(() => {
-    // Initialize AOS on component mount
-    AOS.init({
-      // AOS initialization options
-      duration: 800, // Animation duration
-      easing: 'ease-in-out', // Animation easing
-      once: true, // Whether animation should happen only once - while scrolling down
-    });
-  }, []);
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({
@@ -41,11 +31,11 @@ function Contact() {
       if (response.ok) {
         console.log('Form submitted successfully!');
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Reset the form
+        setFormData({ name: '', email: '', message: '' }); 
       
         setTimeout(() => {
           setSubmitStatus('');
-        }, 2000); // Clear the success message after 2 seconds
+        }, 2000); 
       } else {
         console.error('Server responded with non-OK status');
         setSubmitStatus('error');
@@ -58,8 +48,8 @@ function Contact() {
 
   return (
     <section id='contact' className="contact">
-      <h2 className="contact__title" data-aos="fade-up">Contact Me</h2>
-      <div className="contact__underline" data-aos="fade-up"></div>
+      <h2 className="contact__title" data-aos="fade-up" data-aos-delay="500">Contact Me</h2>
+      <div className="contact__underline" data-aos="fade-up" data-aos-delay="500"></div>
       {submitStatus === 'success' && (
         <div className="contact__response-message contact__response-message--success" data-aos="fade-in">
           Message sent successfully.

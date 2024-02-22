@@ -47,11 +47,12 @@ function Header() {
   return (
     <div id="home" ref={vantaRef} className="header">
      
-      <div className="header-content">
+      <div className="header-content" data-aos="fade-up">
         <div className="intro-text">
-        <h1 >Hi, je m'appelle Sara</h1> 
-    <h2>Junior Developer</h2>
-    <p>Concevoir l'exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l'univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
+        <h1>Hi, je m&apos;appelle Sara</h1>
+<h2>Junior Developer</h2>
+<p>Concevoir l&apos;exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l&apos;univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
+
   </div>
         <div className="logo-container" onClick={handleEnterClick}>
           <img src={Logo} loading="lazy" alt="Logo" className="rotating-logo" />

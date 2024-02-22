@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "/assets/logo.webp";
 import cvFile from '../../../public/assets/Sara_BrancoCV.pdf';
@@ -74,7 +74,7 @@ const Navbar = () => {
       <Link to="/" className="navbar__logo">
         <img src={Logo} alt="Logo" />
       </Link>
-      <button className="navbar__toggle" onClick={toggleNav}>
+      <button className="navbar__toggle" alt="navbar" onClick={toggleNav}>
         <i className="fas fa-bars"></i>
       </button>
       <div className={`navbar__links ${isNavExpanded ? 'is-expanded' : ''}`}>

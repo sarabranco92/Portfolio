@@ -1,5 +1,4 @@
-// src/App.js
-import React from 'react';
+
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import MainContent from './components/MainContent/MainContent'; 
@@ -8,7 +7,22 @@ import 'animate.css/animate.min.css';
 
 import "../src/style/_main.scss";
 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, 
+      once: false, 
+      mirror: false,
+   
+    });
+  }, []);
+
   return (
     <Router>
       <Routes>
