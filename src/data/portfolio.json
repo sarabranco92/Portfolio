@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Booki",
       "description": "Le projet met l'accent sur la création d'une interface utilisateur cohérente et conforme aux maquettes fournies, tout en respectant les bonnes pratiques de codage et les contraintes techniques établies.",
-      "image": "./assets/projets/bookiLogo.webp",
+      "image": "./assets/projets/Booki.webp",
       "modalImage": "./assets/projets/bookiSite.webp",
       "technologies": [
         {"name": "HTML5", "image": "./assets/skills/html.webp"},
@@ -15,7 +15,7 @@
       "id": 2,
       "title": "ohmyfood",
       "description": "Le projet se concentre sur la création d'un site responsive, conçu en mobile-first, et incluant des animations CSS sophistiquées. Vous travaillerez à partir des maquettes fournies pour créer un site adaptatif pour mobile, tablette et desktop.",
-      "image": "./assets/projets/ohmyfoodLogo.webp",
+      "image": "./assets/projets/Ohmyfood.webp",
       "modalImage": "./assets/projets/ohmyfoodSite.webp",
       "technologies": [
         {"name": "figma", "image": "./assets/skills/figma.webp"},
@@ -27,7 +27,7 @@
       "id": 3,
       "title": "Nina Carducci",
       "description": "Le projet se concentre sur la fourniture de fonctionnalités essentielles pour garantir des interactions utilisateurs sécurisées et efficaces à travers une stratégie SEO complète.",
-      "image": "./assets/projets/ninacarducciLogo.webp",
+      "image": "./assets/projets/ninacarducci.webp",
       "modalImage": "./assets/projets/ninacarducciSite.webp",
       "technologies": [
         {"name": "lighthouse", "image": "./assets/skills/lighthouse.webp"},
@@ -40,7 +40,7 @@
         "id": 4,
         "title": "Kasa",
         "description": "Ce projet se concentre sur une refonte complète du site web existant. Il implique l'initialisation d'un projet React, le développement de l'ensemble de l'application y compris les composants React, ainsi que la mise en place des routes avec React Router.",
-        "image": "./assets/projets/kasaLogo.webp",
+        "image": "./assets/projets/kasa.webp",
         "modalImage": "./assets/projets/kasaSite.webp",
         "technologies": [
           {"name": "JavaScript", "image": "./assets/skills/js.webp"},
@@ -54,7 +54,7 @@
         "id": 5,
         "title": "Argent Bank",
         "description": "Ce projet implique la création d'un système d'authentification des utilisateurs et la conception d'APIs et mettre en œuvre des fonctionnalités essentielles pour des interactions utilisateurs sécurisées et efficaces.",
-        "image": "./assets/projets/argentbankLogo.webp",
+        "image": "./assets/projets/argentBank.webp",
         "modalImage": "./assets/projets/argentbankSite.webp",
         "technologies": [
           {"name": "Nodejs", "image": "./assets/skills/node.webp"},

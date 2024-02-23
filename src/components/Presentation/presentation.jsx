@@ -14,7 +14,7 @@ function Presentation() {
       duration: 2000,
       once: false,
       mirror: true,
-      offset: 200,
+      offset: 300,
     });
   }, []);
 
