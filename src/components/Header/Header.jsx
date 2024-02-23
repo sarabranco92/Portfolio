@@ -5,9 +5,18 @@ import BIRDS from 'vanta/dist/vanta.birds.min';
 import Logo from '../../../public/assets/logo.webp'; 
 import "../../style/_main.scss"
 import './_header.scss';
-
+import AOS from 'aos';
 
 function Header() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: 200,
+    });
+  }, []);
 
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = React.useRef(null);
@@ -47,15 +56,15 @@ function Header() {
   return (
     <div id="home" ref={vantaRef} className="header">
      
-      <div className="header-content">
-        <div className="intro-text">
+      <div className="header-content" data-aos="fade-up">
+        <div className="intro-text" data-aos="fade-up">
         <h1>Hi, I&apos;m Sara</h1>
 <h2>Junior Developer</h2>
 <p>Concevoir l&apos;exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l&apos;univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
 
   </div>
         <div className="logo-container" onClick={handleEnterClick}>
-          <img src={Logo} loading="lazy" alt="Logo" className="rotating-logo" />
+          <img src={Logo} loading="lazy" alt="Logo" className="rotating-logo"/>
         </div>
       </div>
     </div>
