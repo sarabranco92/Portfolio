@@ -56,7 +56,7 @@ const Navbar = () => {
   const handleClickScroll = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 70; // Altura do cabeçalho
+      const headerOffset = 200; // Altura do cabeçalho
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - headerOffset;
 

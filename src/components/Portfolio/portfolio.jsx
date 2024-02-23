@@ -1,10 +1,25 @@
 
-import { useState} from 'react';
+import { useState, useEffect} from 'react';
 import 'aos/dist/aos.css'; 
 import projectData from '../../data/portfolio.json';
 import './_portfolio.scss'; 
+import AOS from 'aos';
+
+
 
 function Portfolio() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: 200,
+    });
+  }, []);
+
+ 
+
   const [selectedProject, setSelectedProject] = useState(null);
 
 

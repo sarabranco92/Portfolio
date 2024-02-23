@@ -1,8 +1,20 @@
-import { useState} from 'react';
+import { useState, useEffect} from 'react';
 import 'aos/dist/aos.css'; 
 import './_contact.scss'; 
+import AOS from 'aos';
+
 
 function Contact() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: false,
+    });
+  }, []);
+
+
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitStatus, setSubmitStatus] = useState('');
 

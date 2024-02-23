@@ -3,7 +3,21 @@ import 'aos/dist/aos.css';
 import './_presentation.scss';
 import myImage from '../../../public/assets/photo.webp';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 function Presentation() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: false,
+      mirror: true,
+      offset: 200,
+    });
+  }, []);
+
 
 
   return (

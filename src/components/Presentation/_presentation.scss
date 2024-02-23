@@ -6,7 +6,7 @@
 
 
   &__title {
-    font-size: clamp(1.5rem, 4vw, 2rem); // Responsive font size using clamp
+    font-size: clamp(1.5rem, 4vw, 2rem); 
   }
 
   &__underline {
@@ -14,13 +14,14 @@
     width: 100px;
     height: 4px;
     background-color: #2c2c2c;
-    margin: auto; // Centered margin for better alignment
+    margin: auto; 
   }
 
   &__body {
     display: flex;
     align-items: center;
-    gap: 6rem;
+    gap: 1rem;
+
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -29,7 +30,7 @@
   }
 
   &__image img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
     opacity: 0.8; // Uniform opacity for consistency
 
@@ -45,9 +46,10 @@
 }
 
 .presentation__content {
-  max-width: 800px;
-  line-height: 1.6;
-  margin: auto;
+  max-width: 1000px;
+  line-height: 2;
+  margin: 1rem;
+
 
   @media (max-width: 800px) {
     max-width: 600px;
