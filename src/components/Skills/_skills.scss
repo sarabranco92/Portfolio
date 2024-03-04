@@ -15,7 +15,7 @@ section {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     @media (max-width: 576px) {
-      font-size: 1.5rem; // Smaller font size on phones
+      font-size: 1.5rem; 
     }
   }
 
@@ -27,17 +27,17 @@ section {
     margin-bottom: 1rem;
 
     @media (max-width: 576px) {
-      margin-bottom: 1rem; // Smaller font size on phones
+      margin-bottom: 1rem; 
     }
   }
 
   .skills-layout {
     display: flex;
-    flex-wrap: wrap; // Allow items to wrap on smaller screens
+    flex-wrap: wrap; 
     align-items: flex-start;
 
     .skills__image {
-      flex: 1; // Take full width on small screens, adjusted below
+      flex: 1; 
       img {
         width: 100%;
         height: auto;
@@ -45,7 +45,7 @@ section {
     }
 
     .skills-layout__list {
-      flex: 2; // Take remaining space, adjusted below
+      flex: 2; 
       display: flex;
       flex-direction: column;
       margin: 0 10%;
@@ -68,8 +68,8 @@ section {
             top: 0;
             left: 0;
             height: 100%;
-            width: 0; // Start with no width
-            background-color: inherit; // Inherits the background color
+            width: 0; 
+            background-color: inherit; 
             animation: animateSkill 2s forwards;
 
             .skills-layout__name,
@@ -83,11 +83,11 @@ section {
             }
 
             .skills-layout__name {
-              left: 10px; // Padding from the left
+              left: 10px; 
             }
 
             .skills-layout__level {
-              right: 10px; // Padding from the right
+              right: 10px; 
             }
           }
         }
@@ -99,17 +99,17 @@ section {
 @media (max-width: 750px) {
   .skills-container {
     .skills-layout {
-      flex-direction: column; // Stack the children vertically
+      flex-direction: column; 
 
       .skills__image,
       .skills-layout__list {
-        flex: none; // Override any flex-grow, flex-shrink, and flex-basis properties
-        width: 80%; // Take the full width of the container
-        margin: 0 10%; // Adjust margin as needed
+        flex: none; 
+        width: 80%; 
+        margin: 0 10%; 
       }
 
       .skills__image {
-        order: -1; // Ensures that the image is above the skill bars
+        order: -1; 
         margin-bottom: 1rem; 
         width: 30%;
         margin-left: 35% ;
