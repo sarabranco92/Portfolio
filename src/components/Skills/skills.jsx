@@ -29,7 +29,7 @@ function Skills() {
         </div>
         <div className="skills-layout__list">
           {skillsData.map((skill, index) => (
-            <div key={index} className="skills-layout__item" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
+            <div key={index} className="skills-layout__item" data-aos="fade-up" data-aos-delay={`${index * 50}`}>
               <div className="skills-layout__bar">
                 <div
                   className="skills-layout__fill"

@@ -39,7 +39,7 @@ function Portfolio() {
       <div className="portfolio__underline" data-aos="fade-up"></div>
       <div className="portfolio__grid">
         {projectData.map((project, index) => (
-          <div key={project.id} className="portfolio__item" data-aos="fade-up" data-aos-delay={`${index * 200}`} onClick={() => openModal(project)}>
+          <div key={project.id} className="portfolio__item" data-aos="fade-up" data-aos-delay={`${index * 100}`} onClick={() => openModal(project)}>
             <img src={project.image} alt={project.title} className="portfolio__image" />
           </div>
         ))}
