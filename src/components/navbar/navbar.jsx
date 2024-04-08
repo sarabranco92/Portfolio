@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "/assets/logo.webp";
-import cvFile from '../../../public/assets/Sara_BrancoCV.pdf';
+import cvFile from '../../../public/assets/Sara_BrancoCV_EN.pdf';
 import './_navbar.scss';
 
 const sections = ['#presentation', '#portfolio', '#skills', '#contact'];
@@ -56,7 +56,7 @@ const Navbar = () => {
   const handleClickScroll = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 200; // Altura do cabeçalho
+      const headerOffset = 120; 
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - headerOffset;
 
@@ -65,7 +65,7 @@ const Navbar = () => {
       behavior: 'smooth',
     });
 
-    setIsNavExpanded(false); // Para fechar o menu em mobile
+    setIsNavExpanded(false); 
   }
 };
 

@@ -13,7 +13,6 @@ function Portfolio() {
     AOS.init({
       duration: 1000,
       once: false,
-      mirror: true,
       offset: 300,
     });
   }, []);
@@ -35,7 +34,7 @@ function Portfolio() {
 
   return (
     <section id="portfolio" className="portfolio">
-      <h2 className="portfolio__title" data-aos="fade-up">Mes Projets</h2>
+      <h2 className="portfolio__title" data-aos="fade-up">My Projects</h2>
       <div className="portfolio__underline" data-aos="fade-up"></div>
       <div className="portfolio__grid">
         {projectData.map((project, index) => (
@@ -51,7 +50,7 @@ function Portfolio() {
             <span className="portfolio__modal-close" onClick={closeModal}>&times;</span>
             <div className="portfolio__modal-column">
               <img src={selectedProject.modalImage} alt={selectedProject.title} className="portfolio__modal-img" />
-              <a href={selectedProject.url} className="portfolio__modal-visit" target="_blank" rel="noopener noreferrer">VISITER LE SITE</a>
+              <a href={selectedProject.url} className="portfolio__modal-visit" target="_blank" rel="noopener noreferrer">VISIT THE SITE</a>
             </div>
             <div className="portfolio__modal-center">
               <h3 className="portfolio__modal-title">{selectedProject.title}</h3>

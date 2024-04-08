@@ -1,6 +1,7 @@
 
 import skillsData from "../../data/skills.json"; 
 import './_skills.scss'; 
+import gifSkills from '../../../public/assets/gif.gif';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,7 +13,7 @@ function Skills() {
     AOS.init({
       duration: 1000,
       once: false,
-      mirror: false,
+
     });
   }, []);
 
@@ -20,13 +21,12 @@ function Skills() {
   return (
     <section id="skills" className="skills skills-container">
 <div className="skills__header">
-        <h2 className="skills__title" data-aos="fade-up">Mes Compétences</h2>
+        <h2 className="skills__title" data-aos="fade-up">My Skills</h2>
         <div className="skills__underline"data-aos="fade-up"></div>
       </div>
       <div className="skills-layout">
         <div className="skills__image" data-aos="fade-up">
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJvemVyenFjeHB0ejNreHZsa2wyaXBiajlwM2RtNHNuZHhxdzJlcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9yRMxLuRqyQ0x3jJXD/giphy.gif" alt="Skills" loading="lazy" />
-        </div>
+<img src={gifSkills} loading="lazy" alt="Skills" />        </div>
         <div className="skills-layout__list">
           {skillsData.map((skill, index) => (
             <div key={index} className="skills-layout__item" data-aos="fade-up" data-aos-delay={`${index * 50}`}>

@@ -60,7 +60,7 @@ function Header() {
         <div className="intro-text" data-aos="fade-up">
         <h1>Hi, I&apos;m Sara</h1>
 <h2>Junior Developer</h2>
-<p>Concevoir l&apos;exceptionnel, au carrefour de la technologie et de la créativité <br/> chaque pixel de mes créations numériques raconte une histoire. <br/> Plongez dans l&apos;univers de mon portfolio et découvrez la symphonie de mes réalisations.</p>
+<p>Designing the exceptional, at the crossroads of technology and creativity<br/> every pixel of my digital creations tells a story.<br/> Dive into the universe of my portfolio and discover the symphony of my achievements.</p>
 
   </div>
         <div className="logo-container" onClick={handleEnterClick}>
