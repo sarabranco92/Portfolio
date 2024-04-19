@@ -13,6 +13,7 @@ function Skills() {
     AOS.init({
       duration: 1000,
       once: false,
+      offset: 300,
 
     });
   }, []);
