@@ -35,3 +35,7 @@ Le site portfolio met un point d'honneur sur l'interface utilisateur et l'expér
 - **Gestion de projet** : Expérience acquise dans la gestion de projet, de la conception à la mise en ligne, en passant par le développement et le déploiement.
 
 Ce portfolio représente mon parcours en tant que développeur web et illustre ma passion pour la création d'interfaces utilisateur élégantes et fonctionnelles. Pour plus d'informations sur mes projets ou pour me contacter, veuillez visiter [mon portfolio](https://sarabranco92.github.io/Portfolio/).
+
+## Setup and maintenance guide
+
+See the [project guide](docs/PROJECT_GUIDE.md) for repository-specific setup, commands, configuration, implementation limits and verification steps.
